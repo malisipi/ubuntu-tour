@@ -1,0 +1,61 @@
+.side-iframe{
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    left: 0px;
+    top:0px;
+    border: none;
+}
+
+.content-iframe{
+    position: absolute;
+    top:0px;
+    right: 0px;
+    width: calc(100% - 200px);
+    height: 100%;
+    border: none;
+    background: #333333;
+}
+
+#back{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#forward{
+    position: absolute;
+    top: 0px;
+    left: 30px;
+}
+
+#url-bar{
+    position: absolute;
+    top:0px;
+    left: 70px;
+    width: calc(100% - 209px);
+}
+
+#searchAnything{
+    position: absolute;
+    right: 100px;
+    top: 0px;
+}
+
+#showAsList{
+    position: absolute;
+    right: 65px;
+    top: 0px;
+}
+
+#changeLook{
+    position: absolute;
+    right: 35px;
+    top: 0px;
+}
+
+#menu{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}

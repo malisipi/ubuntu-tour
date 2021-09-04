@@ -1,0 +1,28 @@
+body{
+    background: #222222;
+    padding: 15px;
+    cursor: default;
+}
+
+.icon{
+    height: 24px;
+    width: 24px;
+    filter: brightness(2);
+    float: left;
+}
+
+.icon-slider{
+    height: 24px;
+    width: 24px;
+    filter: brightness(2);
+}
+
+.slider{
+    width: 235px;
+    transform: translate(3px,-9px);
+}
+
+.label{
+    transform: translate(8px,4px);
+    color: #ffffff;
+}

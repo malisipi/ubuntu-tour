@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <img id="theImage" style="position: absolute; left: 50%; top:50%; transform: translate(-50%,-50%);"/>
+        <script>
+            urlParams = new URLSearchParams(window.location.search);
+            document.getElementById("theImage").src = urlParams.get('image');
+        </script>
+<style>
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+  
+::-webkit-scrollbar-track {
+    background: #aaaaaa; 
+}
+   
+::-webkit-scrollbar-thumb {
+    background: #444444; 
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #888888; 
+}
+</style>
+    </body>
+</html>

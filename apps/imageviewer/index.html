@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/app-layout.css">
+        <link rel="stylesheet" href="../css/app-styles.css">
+        <link rel="stylesheet" href="../../css/Font.css">
+        <link rel="stylesheet" href="css/app.css">
+        <script src="js/app.js"></script>
+    </head>
+    <body onload="showImage();">
+        <div class="titlebar-container">
+            <div class="titlebar">
+                <button onclick="zoomOut();" id="zoom-out" class="special-button">
+                    <img class="special-button-image" draggable="false" src="../../icons/Suru/Suru/scalable/actions/zoom-out-symbolic.svg"/>
+                </button>
+                <input id="zoomNumber" type="number" value="100" onchange="setZoom();" class="special-textbox" />
+                <button onclick="zoomIn();" id="zoom-in" class="special-button">
+                    <img class="special-button-image" draggable="false" src="../../icons/Suru/Suru/scalable/actions/zoom-in-symbolic.svg"/>
+                </button>
+                <div class="special-title"></div>
+                <button onclick="doFullscreen();" id="fullscreen" class="special-button">
+                    <img class="special-button-image" draggable="false" src="../../icons/Suru/Suru/scalable/actions/view-fullscreen-symbolic.svg"/>
+                </button>
+                <button onclick="showMenu();" id="menu" class="special-button">
+                    <img class="special-button-image" draggable="false" src="../../icons/Suru/Suru/scalable/actions/open-menu-symbolic.svg"/>
+                </button>
+            </div>
+            <div class="content">
+                <iframe class="content-iframe" allowfullscreen></iframe>
+            </div>
+        </div>
+    </body>
+</html>

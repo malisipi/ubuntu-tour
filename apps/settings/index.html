@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/app-layout.css">
+        <link rel="stylesheet" href="../css/app-styles.css">
+        <link rel="stylesheet" href="../../css/Font.css">
+        <link rel="stylesheet" href="css/app.css">
+        <script src="js/argument.js"></script>
+        <script src="js/app.js"></script>
+    </head>
+    <body onload="checkArgument();">
+        <div class="titlebar-container">
+            <div class="titlebar">
+                <button onclick="searchAnything();" id="searchAnything" class="special-button">
+                    <img class="special-button-image" draggable="false" src="../../icons/Suru/Suru/scalable/actions/search-symbolic.svg"/>
+                </button>
+                <div class="settings-title special-title">Settings</div>
+                <button onclick="showMenu();" id="menu" class="special-button">
+                    <img class="special-button-image" draggable="false" src="../../icons/Suru/Suru/scalable/actions/open-menu-symbolic.svg"/>
+                </button>
+                <div class="category-title special-title">About</div>
+            </div>
+            <div class="content">
+                <iframe class="side-iframe" allowfullscreen src="side.html"></iframe>
+                <iframe class="content-iframe" allowfullscreen src="about.html"></iframe>
+            </div>
+        </div>
+    </body>
+</html>

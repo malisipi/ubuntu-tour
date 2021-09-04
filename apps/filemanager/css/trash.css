@@ -1,0 +1,29 @@
+.trash-nav{
+    position: fixed;
+    padding: 2px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 40px;
+    background: #444444;
+}
+
+.trash-nav-label{
+    color: #ffffff;
+    width: 50px;
+    text-align: left;
+}
+
+.trash-nav-buttons{
+    width: calc(100% - 50px);
+    text-align: right;
+}
+
+button{
+    width: 150px;
+    border: #111111;
+    background: #333333;
+    border-radius: 3px;
+    height: 30px;
+    color: #ffffff;
+}

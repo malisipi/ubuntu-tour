@@ -1,0 +1,82 @@
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+  
+::-webkit-scrollbar-track {
+    background: #aaaaaa; 
+}
+   
+::-webkit-scrollbar-thumb {
+    background: #444444; 
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #888888; 
+}
+
+body{
+    background: #333333;
+}
+
+.item{
+    height: 100px;
+    width: 100px;
+    color: #ffffff;
+    text-align: center;
+    float:left;
+    transition-duration: 0.1s;
+    cursor: default;
+    word-break: break-all;
+}
+
+.item:hover{
+    transition-duration: 0.1s;
+    filter: brightness(1.5);
+}
+
+.item-list{
+    height: 50px;
+    color: #ffffff;
+    cursor: default;
+    font-size: 16px;
+    word-break: break-all;
+}
+
+.item-list-table{
+    border: none;
+    width: 100%;
+}
+
+.item-list-table-1{
+    width: 50px;
+}
+
+.item-list-table-2{
+    text-align: left;
+    color: #ffffff;
+}
+
+.item-list-table-3{
+    text-align: right;
+    color: #999999;
+    font-weight: 500;
+}
+
+.aboutLocation{
+    font-size: 16px;
+    font-weight: 800;
+    color: #ffffff;
+    border-bottom: #222222 1px solid;
+    line-height: 24px;
+}
+
+.item-icon{
+    height:48px;
+    width: 48px;
+}
+
+.item-list-icon{
+    height:48px;
+    width: 48px;
+}

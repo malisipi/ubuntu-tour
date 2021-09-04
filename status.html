@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="apps/css/app-styles.css">
+        <link rel="stylesheet" href="css/status.css">
+        <link rel="stylesheet" href="css/Font.css">
+        <script src="js/status.js"></script>
+    </head>
+    <body>
+        <img draggable="false" src="icons/Suru/Suru/scalable/status/audio-volume-high-symbolic.svg" class="icon-slider"/> <input type="range" min="0" max="100" value="100" class="special-slider slider"/>
+        <img draggable="false" src="icons/Suru/Suru/scalable/status/display-brightness-symbolic.svg" class="icon-slider"/> <input type="range" id="brightness-change" oninput="changeBrightness();" min="30" max="100" value="100" class="special-slider slider"/>
+        <div class="special-section"></div>
+        <img draggable="false" src="icons/Suru/Suru/scalable/status/network-wireless-connected-symbolic.svg" class="icon"/> <div class="label">Wifi</div><br>
+        <img draggable="false" src="icons/Suru/Suru/scalable/status/bluetooth-disabled-symbolic.svg" class="icon"/> <div class="label">Bluetooth is off</div><br>
+        <img draggable="false" src="icons/Suru/Suru/scalable/status/battery-level-100-charging-symbolic.svg" class="icon"/> <div class="label">Full</div><br>
+        <div class="special-section"></div>
+        <div onclick="parent.showStatusAbout();parent.window_create_special(parent.createRandomWindowID(),'apps/settings/index.html','Settings','icons/Suru/Suru/48x48/apps/system-settings.png');"><img draggable="false" src="icons/Suru/Suru/scalable/apps/settings-app-symbolic.svg" class="icon"/> <div class="label">Settings</div></div><br>
+        <img draggable="false" src="icons/Suru/Suru/scalable/actions/system-lock-screen-symbolic.svg" class="icon"/> <div class="label">Lock</div><br>
+        <img draggable="false" src="icons/Suru/Suru/scalable/actions/system-shutdown-symbolic.svg" class="icon"/> <div class="label">Shutdown</div>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+.desktop{
+    position: fixed;
+    left:80px;
+    top:26px;
+    height: calc(100% - 26px);
+    width: calc(100% - 80px);
+    z-index: -1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: left;
+}
+
+.desktop-item{
+    height: 100px;
+    width: 100px;
+    color: #ffffff;
+    text-align: center;
+    float:left;
+    transition-duration: 0.1s;
+    cursor: default;
+    word-break: break-all;
+}
+
+.desktop-item:hover{
+    transition-duration: 0.1s;
+    filter: brightness(1.5);
+}

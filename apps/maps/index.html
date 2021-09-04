@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/app-layout.css">
+        <link rel="stylesheet" href="../css/app-styles.css">
+        <link rel="stylesheet" href="../../css/Font.css">
+        <link rel="stylesheet" href="css/app.css">
+        <script src="js/app.js"></script>
+    </head>
+    <body>
+        <div class="titlebar-container">
+            <div class="titlebar">
+                <button onclick="myLocation();" id="myLocation" class="special-button">
+                    <img class="special-button-image" draggable="false" src="../../icons/Suru/Suru/scalable/actions/find-location-symbolic.svg"/>
+                </button>
+                <button onclick="layers();" id="layers" class="special-button">
+                    <img class="special-button-image" draggable="false" src="../../icons/Suru/Suru/16x16/legacy/dialog-layers.svg"/>
+                </button>
+                <button onclick="zoomOut();" id="zoom-out" class="special-button">
+                    <img class="special-button-image" draggable="false" src="../../icons/Suru/Suru/scalable/actions/zoom-out-symbolic.svg"/>
+                </button>
+                <button onclick="zoomIn();" id="zoom-in" class="special-button">
+                    <img class="special-button-image" draggable="false" src="../../icons/Suru/Suru/scalable/actions/zoom-in-symbolic.svg"/>
+                </button>
+                <input id="searchbar" type="text" value="" onkeydown="goTo();" class="special-textbox" />
+                <button onclick="star();" id="star" class="special-button">
+                    <img class="special-button-image" draggable="false" src="../../icons/Suru/Suru/scalable/status/starred-symbolic.svg"/>
+                </button>
+                <button onclick="showMenu();" id="menu" class="special-button">
+                    <img class="special-button-image" draggable="false" src="../../icons/Suru/Suru/scalable/actions/open-menu-symbolic.svg"/>
+                </button>
+            </div>
+            <div class="content">
+                <iframe src="map.html" class="content-iframe" allowfullscreen></iframe>
+            </div>
+        </div>
+    </body>
+</html>

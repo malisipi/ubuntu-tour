@@ -1,0 +1,38 @@
+.side-iframe{
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    left: 0px;
+    top:0px;
+    border: none;
+}
+
+.content-iframe{
+    position: absolute;
+    top:0px;
+    right: 0px;
+    width: calc(100% - 200px);
+    height: 100%;
+    border: none;
+    background: #333333;
+}
+
+#searchAnything{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+#menu{
+    position: absolute;
+    left: 160px;
+    top: 0px;
+}
+
+.settings-title{
+    left: 90px;
+}
+
+.category-title{
+    left: calc(calc(100% + 190px) / 2);
+}

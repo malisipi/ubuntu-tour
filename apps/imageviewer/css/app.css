@@ -1,0 +1,38 @@
+.content-iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+    z-index: -1;
+}
+
+#zoom-out{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#zoomNumber{
+    position: absolute;
+    top: 0px;
+    width: 96px;
+    left: 30px;
+    text-align: center;
+}
+
+#zoom-in{
+    position: absolute;
+    top:0px;
+    left: 130px;
+}
+
+#fullscreen{
+    position: absolute;
+    right: 35px;
+    top: 0px;
+}
+
+#menu{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}

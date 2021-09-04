@@ -1,0 +1,21 @@
+body{
+    background: #222222;
+    cursor: default;
+}
+
+.image{
+    filter: brightness(2);
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,0px);
+    height: 15vh;
+}
+
+.label{
+    position: fixed;
+    color: #ffffff;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%,0px);
+}

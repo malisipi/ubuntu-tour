@@ -1,0 +1,40 @@
+.app-menu{
+    position: fixed;
+    left:80px;
+    top:26px;
+    height: calc(100% - 26px);
+    width: calc(100% - 80px);
+    background: #222222cc;
+    z-index: 99999999999999999999999999999999999999999;
+}
+
+.app-menu-container{
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.app-menu-app {
+    width: 144px;
+    height: 144px;
+    margin: 3px;
+    border-radius: 10px;
+}
+
+.app-menu-app:hover{
+    background: #ffffff33;
+    transition-duration: 0.2s;
+}
+
+.app-menu-app-image {
+    width: 128px;
+    height: 128px;
+    transform: translate(8px,8px);
+}

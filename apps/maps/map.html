@@ -1,0 +1,19 @@
+<html><body>
+  <div id="mapdiv" style="border: none; position: fixed; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+  <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+  <script>
+    map = new OpenLayers.Map("mapdiv");
+    map.addLayer(new OpenLayers.Layer.OSM());
+
+    //Set start centrepoint and zoom    
+    var lonLat = new OpenLayers.LonLat( -74.0059,40.7142 )
+          .transform(
+            new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
+            map.getProjectionObject() // to Spherical Mercator Projection
+          );
+    var zoom=11;
+    map.setCenter (lonLat, zoom);  
+    
+    document.getElementById("OpenLayers_Control_Zoom_5").hidden=true;
+  </script>
+</body></html>

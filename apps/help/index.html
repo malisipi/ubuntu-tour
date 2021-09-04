@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/app-layout.css">
+        <link rel="stylesheet" href="../css/app-styles.css">
+        <link rel="stylesheet" href="../../css/Font.css">
+        <link rel="stylesheet" href="css/app.css">
+        <script src="js/app.js"></script>
+    </head>
+    <body>
+        <div class="titlebar-container">
+            <div class="titlebar">
+                <button onclick="goToBack();" id="back" class="special-button">
+                    <img class="special-button-image" draggable="false" src="../../icons/Suru/Suru/scalable/actions/go-previous-symbolic.svg"/>
+                </button>
+                <button onclick="goToForward();" id="forward" class="special-button">
+                    <img class="special-button-image" draggable="false" src="../../icons/Suru/Suru/scalable/actions/go-next-symbolic.svg"/>
+                </button>
+                <div class="special-title">Ubuntu Desktop Guide</div>
+                <button onclick="showBookmarks();" id="bookmarks" class="special-button">
+                    <img class="special-button-image" draggable="false" src="../../icons/Suru/Suru/scalable/places/user-bookmarks-symbolic.svg"/>
+                </button>
+                <button onclick="searchbutton();" id="searchbutton" class="special-button">
+                    <img class="special-button-image" draggable="false" src="../../icons/Suru/Suru/scalable/actions/search-symbolic.svg"/>
+                </button>
+                <button onclick="showMenu();" id="menu" class="special-button">
+                    <img class="special-button-image" draggable="false" src="../../icons/Suru/Suru/scalable/actions/open-menu-symbolic.svg"/>
+                </button>
+            </div>
+            <div class="content">
+                <iframe class="content-iframe" allowfullscreen src="https://help.ubuntu.com/stable/ubuntu-help/index.html.en"></iframe>
+            </div>
+        </div>
+    </body>
+</html>

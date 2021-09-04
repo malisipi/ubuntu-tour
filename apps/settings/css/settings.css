@@ -1,0 +1,86 @@
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+  
+::-webkit-scrollbar-track {
+    background: #aaaaaa; 
+}
+   
+::-webkit-scrollbar-thumb {
+    background: #444444; 
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #888888; 
+}
+
+body{
+    background: #333333;
+}
+
+.image-container{
+    text-align: center;
+    padding: 12px;
+}
+
+.ubuntu-symbol{
+    height: 144px;
+    width: 144px;
+}
+
+.bar-container{
+    padding: 12px;
+}
+
+.bar{
+    width: 80%;
+    position: relative;
+    left: 10%;
+    height: 40px;
+    border: #111111 1px solid;
+    background: #222222;
+}
+
+.bar-left{
+    color: #ffffff;
+    text-align: left;
+    padding: 4px;
+    color: 16px;
+}
+
+.bar-right{
+    color: #999999;
+    text-align: right;
+    padding: 4px;
+    font-weight: 500;
+    color: 16px;
+}
+
+#theWallpaper{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%,0px);
+    height: 30vh;
+}
+
+.all-wallpapers{
+    position: absolute;
+    top: 40%;
+    height: 60%;
+    left: 0%;
+    width: 100%;
+    background: #222222;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.wallpaper{
+    height: 90px;
+    width: 160px;
+    padding: 5px;
+    position: relative;
+    top: 5px;
+}

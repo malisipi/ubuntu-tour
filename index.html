@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ubuntu</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="icons/Suru/Suru/scalable/places/start-here-symbolic.svg" type="image/x-icon">  
+        <link rel="stylesheet" href="css/main.css">
+        <script src="main.js"></script>
+        <link rel="stylesheet" href="css/panel.css">
+        <script src="js/panel.js" ></script>
+        <link rel="stylesheet" href="css/Font.css">
+        <script src="js/window.js"></script>
+        <link rel="stylesheet" href="css/window.css">
+        <link rel="stylesheet" href="css/dock.css">
+        <script src="js/app-menu.js"></script>
+        <link rel="stylesheet" href="css/app-menu.css">
+        <link rel="stylesheet" href="css/desktop.css">
+        <link rel="stylesheet" href="css/brightness.css">
+    </head>
+    <body oncontextmenu="return false;">
+        <img src="icons/unsplash/9XngoIpxcEo.jpg" draggable="false" class="wallpaper" />
+        <div class="panel">
+            <div class="panel-activities" onclick="showHideAppMenu();">Activities</div>
+            <img draggable="false" src="icons/null.svg" class="panel-active-app-icon"/>
+            <div class="panel-active-app-name"></div>
+            <div class="panel-notification" onclick="showNotificationAbout();"></div>
+            <div class="panel-status" onclick="showStatusAbout();">
+                <img class="panel-status-icon" draggable="false" src="icons/Suru/Suru/scalable/status/network-wireless-connected-symbolic.svg"/>&nbsp;&nbsp;
+                <img class="panel-status-icon" draggable="false" src="icons/Suru/Suru/scalable/status/audio-volume-high-symbolic.svg"/>&nbsp;&nbsp;
+                <img class="panel-status-icon" draggable="false" src="icons/Suru/Suru/scalable/status/battery-level-100-charging-symbolic.svg"/>&nbsp;&nbsp;
+                <img class="panel-status-icon" draggable="false" src="icons/Suru/Suru/scalable/ui/pan-down-symbolic.svg"/>&nbsp;&nbsp;
+            </div>
+            <iframe class="status-about" src="status.html" hidden></iframe>
+            <iframe class="notification-about" src="notification.html" hidden></iframe>
+        </div>
+        <div class="desktop" onclick="changePanelActiveAppIcon('icons/null.svg','');">
+            <div class="desktop-item" ondblclick="window_create_special(createRandomWindowID(),'apps/filemanager/index.html','Files','icons/Suru/Suru/48x48/apps/filemanager-app.png');">
+                <img draggable="false" class="item-icon" src="icons/Suru/Suru/48x48/places/user-home.png"/><br>
+                Home
+            </div>
+            <div class="desktop-item" ondblclick="window_create_special(createRandomWindowID(),'apps/filemanager/index.html?open=Trash','Files','icons/Suru/Suru/48x48/apps/filemanager-app.png');">
+                <img draggable="false" class="item-icon" src="icons/Suru/Suru/48x48/places/user-trash.png"/><br>
+                Trash
+            </div>
+        </div>
+        <div class="dock-app-menu">
+            <img onclick="showHideAppMenu();" draggable="false" src="icons/Suru/Suru/scalable/categories/preferences-desktop-apps-symbolic.svg" class="dock-app-menu-icon"/>
+        </div>
+        <div id="dock" class="dock"></div>
+        <div class="app-menu" style="visibility: hidden;">
+            <div class="app-menu-container">
+                <div class="app-menu-app"><img class="app-menu-app-image" onclick="window_create_special(createRandomWindowID(),'apps/webbrowser/index.html','Web','icons/Suru/Suru/48x48/apps/webbrowser-app.png');" draggable="false" src="icons/Suru/Suru/256x256/apps/webbrowser-app.png"/></div>
+                <div class="app-menu-app"><img class="app-menu-app-image" onclick="window_create_special(createRandomWindowID(),'apps/filemanager/index.html','Files','icons/Suru/Suru/48x48/apps/filemanager-app.png');" draggable="false" src="icons/Suru/Suru/256x256/apps/filemanager-app.png"/></div>
+                <div class="app-menu-app"><img class="app-menu-app-image" onclick="window_create_special(createRandomWindowID(),'apps/imageviewer/index.html','Image Viewer','icons/Suru/Suru/48x48/apps/image-viewer-app.png');" draggable="false" src="icons/Suru/Suru/256x256/apps/image-viewer-app.png"/></div>
+                <div class="app-menu-app"><img class="app-menu-app-image" onclick="window_create_special(createRandomWindowID(),'apps/maps/index.html','Maps','icons/Suru/Suru/48x48/apps/maps-app.png');" draggable="false" src="icons/Suru/Suru/256x256/apps/maps-app.png"/></div>
+                <div class="app-menu-app"><img class="app-menu-app-image" onclick="window_create_special(createRandomWindowID(),'apps/help/index.html','Help','icons/Suru/Suru/48x48/apps/help-app.png');" draggable="false" src="icons/Suru/Suru/256x256/apps/help-app.png"/></div>
+                <div class="app-menu-app"><img class="app-menu-app-image" onclick="window_create_special(createRandomWindowID(),'apps/settings/index.html','Settings','icons/Suru/Suru/48x48/apps/system-settings.png');" draggable="false" src="icons/Suru/Suru/256x256/apps/system-settings.png"/></div>
+            </div>
+        </div>
+        <div class="context-menu-container" onclick="showHideContextMenu();" hidden>
+            <iframe class="context-menu" src="contextmenu.html"></iframe>
+        </div>
+        <div class="brightness" id="brightness"></div>
+    </body>
+</html>

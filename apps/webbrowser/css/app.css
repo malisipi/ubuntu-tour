@@ -1,0 +1,48 @@
+.content-iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+#back{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#forward{
+    position: absolute;
+    top: 0px;
+    left: 30px;
+}
+
+#reload{
+    position: absolute;
+    top:0px;
+    left: 65px;
+}
+
+#new-tab{
+    position: absolute;
+    top:0px;
+    left: 100px;
+}
+
+#url-bar{
+    position: absolute;
+    top:0px;
+    left: 135px;
+    width: calc(100% - 209px);
+}
+
+#bookmarks{
+    position: absolute;
+    right: 35px;
+    top: 0px;
+}
+
+#menu{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
