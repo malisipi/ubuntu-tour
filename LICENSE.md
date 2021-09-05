@@ -1,4 +1,4 @@
-* This project licensed by [GPL v3](./LICENSE_GPL3.txt).
+* This project licensed by [MPL](./LICENSE.txt).
 
 * css/UbuntuRegular.ttf licensed by [Ubuntu Font License](./LICENSE_UFL.txt).
 
@@ -11,3 +11,5 @@
 > Ubuntu and Canonical are registered trademarks of Canonical Ltd.
 
 > Gnome are registered trademarks of Gnome.
+
+> WineHQ are registered trademarks of WineHQ.

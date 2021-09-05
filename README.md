@@ -20,7 +20,7 @@ For introduce the Ubuntu environment' beauty (on web) and for fun. :) I was insp
 ## To-Do List
 
 * Increase clone apps' functionality
-* [6] Create more clone aplication
+* [7] Create more clone aplication
 * [-] Update interface to similar Ubuntu 21.10 interface
 
 ## Notes
@@ -33,4 +33,4 @@ For introduce the Ubuntu environment' beauty (on web) and for fun. :) I was insp
 
 ## License
 
-This project licensed by GPL v3. Learn more from [here](./LICENSE.md)
+This project licensed by MPL. Learn more from [here](./LICENSE.md)
