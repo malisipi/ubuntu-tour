@@ -1,6 +1,6 @@
 .content-iframe{
-    width: 100%;
-    height: 100%;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
     border: none;
     z-index: -1;
 }

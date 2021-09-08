@@ -20,7 +20,7 @@ For introduce the Ubuntu environment' beauty (on web) and for fun. :) I was insp
 ## To-Do List
 
 * Increase clone apps' functionality
-* [7] Create more clone aplication
+* [8] Create more clone aplication
 * [-] Update interface to similar Ubuntu 21.10 interface
 
 ## Notes

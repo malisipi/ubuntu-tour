@@ -1,0 +1,28 @@
+body{
+    background: #0008;
+}
+
+.content-iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+    z-index: -1;
+}
+
+#newTab{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#search{
+    position: absolute;
+    right: 35px;
+    top: 0px;
+}
+
+#menu{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}

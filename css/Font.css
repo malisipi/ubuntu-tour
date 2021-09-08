@@ -3,19 +3,15 @@
   src: url(./UbuntuRegular.ttf);
 }
 
-html {
+@font-face {
+  font-family: UbuntuMonoRegular;
+  src: url(./UbuntuMonoRegular.ttf);
+}
+
+html,input,textarea,button {
   font-family: UbuntuRegular;
 }
 
 input {
-  font-family: UbuntuRegular;
   color:white;
-}
-
-button{
-  font-family: UbuntuRegular;
-}
-
-textarea{
-  font-family: UbuntuRegular;
 }
