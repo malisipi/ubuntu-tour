@@ -16,19 +16,23 @@
         <link rel="stylesheet" href="css/app-menu.css">
         <link rel="stylesheet" href="css/desktop.css">
         <link rel="stylesheet" href="css/brightness.css">
+        <script src="js/activities.js"></script>
+        <link rel="stylesheet" href="css/activities.css">
+        <script src="js/localStorage.js"></script>
     </head>
     <body oncontextmenu="return false;">
-        <img src="icons/unsplash/9XngoIpxcEo.jpg" draggable="false" class="wallpaper" />
+        <img src="" draggable="false" class="wallpaper" />
         <div class="panel">
-            <div class="panel-activities" onclick="showHideAppMenu();">Activities</div>
-            <img draggable="false" src="icons/null.svg" class="panel-active-app-icon"/>
-            <div class="panel-active-app-name"></div>
+            <div class="panel-activities" onclick="showHideActivities();">Activities</div>
+            <div class="panel-active-app">
+                <img draggable="false" src="icons/null.svg" class="panel-active-app-icon"/>
+                <div class="panel-active-app-name"></div>
+            </div>
             <div class="panel-notification" onclick="showNotificationAbout();"></div>
             <div class="panel-status" onclick="showStatusAbout();">
-                <img class="panel-status-icon" draggable="false" src="icons/Suru/Suru/scalable/status/network-wireless-connected-symbolic.svg"/>&nbsp;&nbsp;
-                <img class="panel-status-icon" draggable="false" src="icons/Suru/Suru/scalable/status/audio-volume-high-symbolic.svg"/>&nbsp;&nbsp;
-                <img class="panel-status-icon" draggable="false" src="icons/Suru/Suru/scalable/status/battery-level-100-charging-symbolic.svg"/>&nbsp;&nbsp;
-                <img class="panel-status-icon" draggable="false" src="icons/Suru/Suru/scalable/ui/pan-down-symbolic.svg"/>&nbsp;&nbsp;
+                <img class="panel-status-icon" draggable="false" src="icons/Suru/Suru/scalable/status/network-wireless-connected-symbolic.svg"/>
+                <img class="panel-status-icon" draggable="false" src="icons/Suru/Suru/scalable/status/audio-volume-high-symbolic.svg"/>
+                <img class="panel-status-icon" draggable="false" src="icons/Suru/Suru/scalable/status/battery-level-100-charging-symbolic.svg"/>
             </div>
             <iframe class="status-about" src="status.html" hidden></iframe>
             <iframe class="notification-about" src="notification.html" hidden></iframe>
@@ -38,16 +42,19 @@
                 <img draggable="false" class="item-icon" src="icons/Suru/Suru/48x48/places/user-home.png"/><br>
                 Home
             </div>
-            <div class="desktop-item" ondblclick="window_create_special(createRandomWindowID(),'apps/filemanager/index.html?open=Trash','Files','icons/Suru/Suru/48x48/apps/filemanager-app.png');">
-                <img draggable="false" class="item-icon" src="icons/Suru/Suru/48x48/places/user-trash.png"/><br>
-                Trash
-            </div>
         </div>
         <div class="dock-app-menu">
             <img onclick="showHideAppMenu();" draggable="false" src="icons/Suru/Suru/scalable/categories/preferences-desktop-apps-symbolic.svg" class="dock-app-menu-icon"/>
         </div>
-        <div id="dock" class="dock"></div>
+        <div class="dock">
+            <div id="dock"></div>
+            <div class="dock-app-container">
+                <img class="dock-app" onclick="window_create_special(createRandomWindowID(),'apps/filemanager/index.html?open=Trash','Files','icons/Suru/Suru/48x48/apps/filemanager-app.png');" draggable="false" src="icons/Suru/Suru/48x48/places/user-trash.png">
+            </div>
+        </div>
         <div class="app-menu" style="visibility: hidden;">
+            <div class="menu-searchbox"><img src="icons/Suru/Suru/scalable/actions/search-symbolic.svg" draggable="false" /><input type="text" placeholder="Write to search" onfocus="this.parentNode.style.border='2px #f7b33f solid'; this.parentNode.style.transform='translate(-1px,-1px)';"  onfocusout="this.parentNode.style.border=''; this.parentNode.style.transform='';this.value='';"/></div>
+            <img onclick="showHideAppMenu();" class="app-menu-container-wallpaper" />
             <div class="app-menu-container">
                 <div class="app-menu-app"><img class="app-menu-app-image" onclick="window_create_special(createRandomWindowID(),'apps/webbrowser/index.html','Web','icons/Suru/Suru/48x48/apps/webbrowser-app.png');" draggable="false" src="icons/Suru/Suru/256x256/apps/webbrowser-app.png"/></div>
                 <div class="app-menu-app"><img class="app-menu-app-image" onclick="window_create_special(createRandomWindowID(),'apps/filemanager/index.html','Files','icons/Suru/Suru/48x48/apps/filemanager-app.png');" draggable="false" src="icons/Suru/Suru/256x256/apps/filemanager-app.png"/></div>
@@ -58,6 +65,10 @@
                 <div class="app-menu-app"><img class="app-menu-app-image" onclick="window_create_special(createRandomWindowID(),'apps/terminal/index.html','Terminal','icons/Suru/Suru/48x48/apps/terminal-app.png');" draggable="false" src="icons/Suru/Suru/256x256/apps/terminal-app.png"/></div>
                 <div class="app-menu-app"><img class="app-menu-app-image" onclick="window_create(createRandomWindowID(),'https://paint.js.org','Paint - WineHQ','https://paint.js.org/assets/icon.png');" draggable="false" src="https://paint.js.org/assets/icon.png"/></div>
             </div>
+        </div>
+        <div class="activities" style="visibility: hidden;">
+            <div class="menu-searchbox"><img src="icons/Suru/Suru/scalable/actions/search-symbolic.svg" draggable="false" /><input type="text" placeholder="Write to search" onfocus="this.parentNode.style.border='2px #f7b33f solid'; this.parentNode.style.transform='translate(-1px,-1px)';"  onfocusout="this.parentNode.style.border=''; this.parentNode.style.transform='';this.value='';"/></div>
+            <img onclick="showHideActivities();" class="activities-wallpaper" />
         </div>
         <div class="context-menu-container" onclick="showHideContextMenu();" hidden>
             <iframe class="context-menu" src="contextmenu.html"></iframe>

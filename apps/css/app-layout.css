@@ -1,5 +1,7 @@
 body{
     background: #141414;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 .titlebar-container{

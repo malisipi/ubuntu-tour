@@ -1,6 +1,21 @@
 body{
     background: #222222;
-    padding: 15px;
+    display: grid;
+    grid-template-areas:
+    'sound      sound-slider     '
+    'brightness brightness-slider'
+    'section    section          '
+    'wifi       wifi-text        '
+    'bluetooth  bluetooth-text   '
+    'battery    battery-text     '
+    'section2   section2         '
+    'settings   settings-text    '
+    'lock       lock-text        '
+    'shutdown   shutdown-text    ';
+    grid-gap: 10px;
+    grid-template-rows: auto auto 5px auto auto auto 5px auto auto auto;
+    grid-template-columns: 30px auto;
+    justify-content: center;
     cursor: default;
 }
 
@@ -19,7 +34,7 @@ body{
 
 .slider{
     width: 235px;
-    transform: translate(3px,-9px);
+    align-self: flex-end;
 }
 
 .label{

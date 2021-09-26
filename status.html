@@ -7,15 +7,15 @@
         <script src="js/status.js"></script>
     </head>
     <body>
-        <img draggable="false" src="icons/Suru/Suru/scalable/status/audio-volume-high-symbolic.svg" class="icon-slider"/> <input type="range" min="0" max="100" value="100" class="special-slider slider"/>
-        <img draggable="false" src="icons/Suru/Suru/scalable/status/display-brightness-symbolic.svg" class="icon-slider"/> <input type="range" id="brightness-change" oninput="changeBrightness();" min="30" max="100" value="100" class="special-slider slider"/>
-        <div class="special-section"></div>
-        <img draggable="false" src="icons/Suru/Suru/scalable/status/network-wireless-connected-symbolic.svg" class="icon"/> <div class="label">Wifi</div><br>
-        <img draggable="false" src="icons/Suru/Suru/scalable/status/bluetooth-disabled-symbolic.svg" class="icon"/> <div class="label">Bluetooth is off</div><br>
-        <img draggable="false" src="icons/Suru/Suru/scalable/status/battery-level-100-charging-symbolic.svg" class="icon"/> <div class="label">Full</div><br>
-        <div class="special-section"></div>
-        <div onclick="parent.showStatusAbout();parent.window_create_special(parent.createRandomWindowID(),'apps/settings/index.html','Settings','icons/Suru/Suru/48x48/apps/system-settings.png');"><img draggable="false" src="icons/Suru/Suru/scalable/apps/settings-app-symbolic.svg" class="icon"/> <div class="label">Settings</div></div><br>
-        <img draggable="false" src="icons/Suru/Suru/scalable/actions/system-lock-screen-symbolic.svg" class="icon"/> <div class="label">Lock</div><br>
-        <img draggable="false" src="icons/Suru/Suru/scalable/actions/system-shutdown-symbolic.svg" class="icon"/> <div class="label">Shutdown</div>
+        <img style="grid-area: sound;" draggable="false" src="icons/Suru/Suru/scalable/status/audio-volume-high-symbolic.svg" class="icon-slider"/> <input style="grid-area: sound-slider;" type="range" min="0" max="100" value="100" class="special-slider slider"/>
+        <img style="grid-area: brightness;" draggable="false" src="icons/Suru/Suru/scalable/status/display-brightness-symbolic.svg" class="icon-slider"/> <input style="grid-area: brightness-slider;" type="range" id="brightness-change" oninput="changeBrightness();" min="30" max="100" value="100" class="special-slider slider"/>
+        <div style="grid-area: section;" class="special-section"></div>
+        <img style="grid-area: wifi;" draggable="false" src="icons/Suru/Suru/scalable/status/network-wireless-connected-symbolic.svg" class="icon"/> <div style="grid-area: wifi-text;" class="label">Wifi</div>
+        <img style="grid-area: bluetooth;" draggable="false" src="icons/Suru/Suru/scalable/status/bluetooth-disabled-symbolic.svg" class="icon"/> <div style="grid-area: bluetooth-text;" class="label">Bluetooth is off</div>
+        <img style="grid-area: battery;" draggable="false" src="icons/Suru/Suru/scalable/status/battery-level-100-charging-symbolic.svg" class="icon"/> <div style="grid-area: battery-text;" class="label">Full</div>
+        <div style="grid-area: section2;" class="special-section"></div>
+        <img style="grid-area: settings;" onclick="openSettings();" draggable="false" src="icons/Suru/Suru/scalable/apps/settings-app-symbolic.svg" class="icon"/> <div style="grid-area: settings-text;" onclick="openSettings();" class="label">Settings</div>
+        <img style="grid-area: lock;" draggable="false" src="icons/Suru/Suru/scalable/actions/system-lock-screen-symbolic.svg" class="icon"/> <div style="grid-area: lock-text;" class="label">Lock</div>
+        <img style="grid-area: shutdown;" draggable="false" src="icons/Suru/Suru/scalable/actions/system-shutdown-symbolic.svg" class="icon"/> <div style="grid-area: shutdown-text;" class="label">Shutdown</div>
     </body>
 </html>

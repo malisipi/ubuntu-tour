@@ -145,16 +145,22 @@ function window_minimize(w){
     if(document.getElementById(w).hidden){
         document.getElementById(w).hidden=false;
         changeWindowZIndex(w);
+        document.getElementById(w).onmousedown()
     }else{
         if(ZIndex-1==document.getElementById(w).style.zIndex){
             document.getElementById(w).hidden=true;
+            changePanelActiveAppIcon('icons/null.svg','');
         }else{
             changeWindowZIndex(w);
+            document.getElementById(w).onmousedown()
         }
     }
 }
 
+window_infos={};
+
 function window_maximize(w){
+    window_infos[w]=[document.getElementById(w).style.top,document.getElementById(w).style.left,document.getElementById(w).style.width,document.getElementById(w).style.height];
     document.getElementById(w).style.top="26px";
     document.getElementById(w).style.left="80px";
     document.getElementById(w).style.width="calc(100% - 80px)";
@@ -169,10 +175,10 @@ function window_maximize(w){
 }
 
 function window_restore(w){
-    document.getElementById(w).style.top="100px";
-    document.getElementById(w).style.left="100px";
-    document.getElementById(w).style.width="300px";
-    document.getElementById(w).style.height="300px";
+    document.getElementById(w).style.top=window_infos[w][0];
+    document.getElementById(w).style.left=window_infos[w][1];
+    document.getElementById(w).style.width=window_infos[w][2];
+    document.getElementById(w).style.height=window_infos[w][3];
     AllowMovable(document.getElementById(w));
     document.getElementById(w+"-maximize").src="icons/Suru/Suru/scalable/ui/window-maximize-symbolic.svg";
     document.getElementById(w+"-maximize").onclick = function(e) {window_maximize(w)};
@@ -184,7 +190,7 @@ function window_restore(w){
 
 function window_create(name,url,title,icon){
     hideAppMenu();
-    document.getElementById("dock").insertAdjacentHTML('afterend',"<div id=\""+name+"\" onmousedown=\"changePanelActiveAppIcon('"+icon+"','"+title+"');changeWindowZIndex('"+name+"');\" class=\"window\">\
+    document.getElementsByClassName("dock")[0].insertAdjacentHTML('afterend',"<div id=\""+name+"\" onmousedown=\"changePanelActiveAppIcon('"+icon+"','"+title+"');changeWindowZIndex('"+name+"');\" class=\"window\">\
         <div id=\""+name+"-titlebar\" class=\"window-titlebar\">\
             <div class=\"window-titlebar-title\">"+title+"</div>\
             <div class=\"window-titlebar-control\">\
@@ -200,12 +206,13 @@ function window_create(name,url,title,icon){
         <div class=\"dock-app-active\"></div>\
         <img class=\"dock-app\" onclick=\"window_minimize('"+name+"');\" draggable=\"false\" src=\""+icon+"\"/>\
     </div>";
-    
+    changePanelActiveAppIcon(icon,title);
+    changeWindowZIndex(name);
 }
 
 function window_create_special(name,url,title,icon){
     hideAppMenu();
-    document.getElementById("dock").insertAdjacentHTML('afterend',"<div id=\""+name+"\" onmousedown=\"changePanelActiveAppIcon('"+icon+"','"+title+"');changeWindowZIndex('"+name+"');\" class=\"window\">\
+    document.getElementsByClassName("dock")[0].insertAdjacentHTML('afterend',"<div id=\""+name+"\" onmousedown=\"changePanelActiveAppIcon('"+icon+"','"+title+"');changeWindowZIndex('"+name+"');\" class=\"window\">\
         <div id=\""+name+"-titlebar\" class=\"window-titlebar-special\">\
             <div class=\"window-titlebar-control\">\
                 <img class=\"window-titlebar-control-icon\" onclick=\"window_minimize('"+name+"');\" draggable=\"false\" src=\"icons/Suru/Suru/scalable/ui/window-minimize-symbolic.svg\"/>&nbsp;&nbsp;\
@@ -223,11 +230,14 @@ function window_create_special(name,url,title,icon){
         <div class=\"dock-app-active\"></div>\
         <img class=\"dock-app\" onclick=\"window_minimize('"+name+"');\" draggable=\"false\" src=\""+icon+"\"/>\
     </div>";
+    changePanelActiveAppIcon(icon,title);
+    changeWindowZIndex(name);
 }
 
 function window_delete(w){
     document.getElementById(w).remove();
     document.getElementById(w+"-dock").remove();
+    changePanelActiveAppIcon('icons/null.svg','');
 }
 
 ZIndex=1000;
@@ -237,8 +247,9 @@ function changeWindowZIndex(id){
     ZIndex+=1;
 }
 
+latest_window_id=0;
+
 function createRandomWindowID(){
-    return "w"+Math.floor(Math.random() * Math.random() * Math.random() * Math.random()*10000000)+
-    Math.floor(Math.random() * Math.random() * Math.random() * Math.random()*10000000)+
-    Math.floor(Math.random() * Math.random() * Math.random() * Math.random()*10000000);
+    latest_window_id+=1;
+    return "w"+latest_window_id;
 }

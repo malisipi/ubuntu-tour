@@ -5,9 +5,15 @@
     <link rel="stylesheet" href="../../css/Font.css">
     <link rel="stylesheet" href="../css/app-styles.css">
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.9.5/brython.min.js" integrity="sha512-Oe3i0p3zVIqykQ2TZhGOA/+JGe0WAqVoPVMHJGnubFjr3n+FYJTpctq98B9VBBvFMaHgDm18i1XsH2Lt1heQ1Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.9.5/brython_stdlib.js" integrity="sha512-UwjF5/4q/UBE4ozW4XmBauIoIUDNcfOHb2al+IanIRNtUdbYv7WfzF+mxeCNuiMP/EfZwOLrhPydCYXo92XvmA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
-    <textarea id="out" disabled></textarea>
+    <script type="text/python3">
+    from interpreter import Interpreter
+    Interpreter("out")
+    </script>
+    <textarea id="out" spellcheck="false"></textarea>
     <script src="js/main.js"></script>
 </body>
 </html>

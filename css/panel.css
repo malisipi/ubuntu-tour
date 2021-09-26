@@ -10,10 +10,10 @@
 
 .panel-activities{
     position: fixed;
-    height: 26px;
+    height: 22px;
     width: 85px;
-    left: 0px;
-    top: 0px;
+    left: 2px;
+    top: 2px;
     font-size: 16px;
     color: #ffffff;
     text-align: center;
@@ -22,35 +22,46 @@
     align-content: center;
     flex-direction: column;
     cursor: default;
+    transition-duration: 0.2s;
+}
+
+.panel-active-app{
+    position: fixed;
+    left: 90px;
+    width: 0px;
+    height: 22px;
+    top: 2px;
+    transition-duration: 0.2s;
+    cursor: default;
 }
 
 .panel-active-app-icon{
-    position: fixed;
+    position: absolute;
     height: 16px;
     width: 16px;
-    left: 100px;
-    top: 5px;
+    left: 10px;
+    top: 3px;
     cursor: default;
     filter: grayscale(1);
 }
 
 .panel-active-app-name{
-    position: fixed;
+    position: absolute;
     height: 16px;
-    width: 400px;
-    left: 120px;
-    top: 5px;
+    left: 30px;
+    top: 3px;
     font-size: 16px;
     color: #ffffff;
     cursor: default;
+    white-space:nowrap;
 }
 
 .panel-notification{
     position: fixed;
-    height: 26px;
-    width: 150px;
+    height: 22px;
+    width: 120px;
     left: 50%;
-    top: 0px;
+    top: 2px;
     transform: translate(-50%,0);
     font-size: 16px;
     color: #ffffff;
@@ -60,18 +71,23 @@
     align-content: center;
     flex-direction: column;
     cursor: default;
+    transition-duration: 0.2s;
 }
 
 .panel-status{
     position: fixed;
-    height: 21px;
-    width: 110px;
-    right: 0px;
-    top: 5px;
+    height: 22px;
+    width: 80px;
+    right: 2px;
+    top: 2px;
     font-size: 16px;
     color: #ffffff;
-    text-align: right;
     cursor: default;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-items: center;
+    transition-duration: 0.2s;
 }
 
 .panel-status-icon{
@@ -87,6 +103,7 @@
     height: 315px;
     border: #222222 2px solid;
     border-radius: 5px;
+    border: #777777 solid 1px;
 }
 
 .notification-about{
@@ -98,4 +115,5 @@
     height: 300px;
     border: #222222 2px solid;
     border-radius: 5px;
+    border: #777777 solid 1px;
 }

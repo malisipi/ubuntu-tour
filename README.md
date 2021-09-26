@@ -1,12 +1,12 @@
 # Ubuntu Tour
 
-Web based Ubuntu 21.04 desktop remake. You can try latest ubuntu edition remake from [here](https://malisipi.github.io/ubuntu-tour/)
+Web based Ubuntu 21.10 desktop remake. You can try latest ubuntu edition remake from [here](https://malisipi.github.io/ubuntu-tour/)
 
 ## Features
 
 * Multi-window (You can open same application 2 (or more) times)
 * Resizable, draggable windows
-* Changable wallpapers
+* Changeable wallpapers
 * Similar interface with Gnome (Ubuntu Tour imitate Gnome Interface however never use Gnome code.)
 * Clone applications
 
@@ -20,8 +20,9 @@ For introduce the Ubuntu environment' beauty (on web) and for fun. :) I was insp
 ## To-Do List
 
 * Increase clone apps' functionality
-* [8] Create more clone aplication
-* [-] Update interface to similar Ubuntu 21.10 interface
+* [8] Create more clone application
+* [+] Update interface to similar Ubuntu 21.10 interface
+* [-] Update interface to similar Ubuntu 22.04 interface
 
 ## Notes
 
@@ -33,4 +34,4 @@ For introduce the Ubuntu environment' beauty (on web) and for fun. :) I was insp
 
 ## License
 
-This project licensed by MPL. Learn more from [here](./LICENSE.md)
+This project licensed by MPL2. Learn more from [here](./LICENSE.md)

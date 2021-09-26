@@ -1,4 +1,4 @@
-* This project licensed by [MPL](./LICENSE.txt).
+* This project licensed by [MPL2](./LICENSE.txt).
 
 * css/UbuntuRegular.ttf licensed by [Ubuntu Font License](./LICENSE_UFL.txt).
 
@@ -8,8 +8,12 @@
 
 * Bootstrap Icons licensed by [Mit License](./LICENSE_MIT.txt)
 
+* Brython licensed by [BSD-3-Clause License](./LICENCE_BSD3Clause.TXT)
+
 > Ubuntu and Canonical are registered trademarks of Canonical Ltd.
 
 > Gnome are registered trademarks of Gnome.
 
 > WineHQ are registered trademarks of WineHQ.
+
+> Python are registered trademarks of Python Software Foundation.

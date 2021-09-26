@@ -35,14 +35,17 @@ __console_info="Welcome to Terminal";
 outputs=__console_info;
 now_dir="/";
 now_command="";
+run_python3=0;
 
 function updateOutputs(){
     out.value=outputs;
 }
 
 function updateOutputsWithCommands(){
-    out.value=outputs+"\nuser@desktop:"+now_dir+"# "+now_command;
-    out.scrollBy(0,9999999999999999999999999);
+    setTimeout(() => {
+        out.value=outputs+"\nuser@desktop:"+now_dir+"# "+now_command;
+        out.scrollBy(0,9999999999999999999999999);
+    }, 1);
 }
 
 function clearOutputs(){
@@ -82,6 +85,9 @@ function runBashCommand(__command){
         writeOutput("You are already logged in as root user.")
     }else if(__the_command=="sh"||__the_command=="bash"){
         writeOutput(__console_info);
+    }else if(__the_command=="python3"){
+        run_python3=1;
+        brython({"debug":0});
     }else if(__the_command=="echo"){
         writeOutput(__command.join(" ").replace("echo ",""))
     }else if(__the_command=="cd"){
@@ -113,7 +119,7 @@ function runBashCommand(__command){
 mkdir    rmdir   cp      mv      rm\n\
 apt-get  apt     dpkg    su      sudo\n\
 sh       bash    echo    help    clear\n\
-cd       ls      dir")
+cd       ls      dir     python3 ")
     }else{
         writeOutput(__the_command+": Command not found")
     }
@@ -122,6 +128,7 @@ cd       ls      dir")
 }
 
 function handlerKeyPress(){
+    if(run_python3==1) return false;
     keyCode=window.event.keyCode;
     keyName=window.event.key;
     if(keyCode==8){

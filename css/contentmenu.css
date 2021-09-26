@@ -1,24 +1,30 @@
 body{
-    cursor: default;
-}
-
-.option-list{
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    height: 100%;
-    width: 100%;
     background: #222222;
+    display: grid;
+    grid-template-rows: auto auto;
+    margin: 5px 0px;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
-.option{
-    width: 100%;
+body > div{
     transition-duration: 0.2s;
-    border-radius: 5px;
     color: #ffffff;
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+    line-height: 25px;
 }
 
-.option:hover{
+body > div > div{
+    margin: 0px 25px;
+}
+
+body > div:hover{
     transition-duration: 0.2s;
     background: #444444;
+}
+
+.section{
+    border-bottom: 1px #777777 solid;
 }

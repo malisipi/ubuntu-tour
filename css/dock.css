@@ -2,7 +2,7 @@
     position: fixed;
     top:26px;
     left: 0px;
-    background: #222222;
+    background: #111111;
     width: 80px;
     z-index: 99999999999999999999999999999999999999999;
     height: calc(100% - 106px);
@@ -44,7 +44,7 @@
     left: 0px;
     width: 80px;
     height: 80px;
-    background: #222222;
+    background: #111111;
     z-index: 99999999999999999999999999999999999999999;
 }
 

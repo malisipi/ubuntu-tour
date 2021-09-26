@@ -4,5 +4,6 @@ function showWallpaper(){
 
 function setWallpaper(file){
     parent.parent.document.getElementsByClassName("wallpaper")[0].src="icons/unsplash/"+file;
+    parent.parent.window.localStorage["wallpaper"]="icons/unsplash/"+file;
     document.getElementById("theWallpaper").src="../../icons/unsplash/"+file;
 }

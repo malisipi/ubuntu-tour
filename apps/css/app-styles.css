@@ -15,6 +15,11 @@
     background: #888888; 
 }
 
+body{
+    user-select: none;
+    -webkit-user-select: none;
+}
+
 .special-button{
     border: #111111;
     background: #333333;

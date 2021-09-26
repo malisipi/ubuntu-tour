@@ -17,6 +17,9 @@
 
 body{
     background: #222222;
+    margin: 0px;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 .location-inactive{

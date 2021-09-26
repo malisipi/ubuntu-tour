@@ -2,6 +2,10 @@ body{
     background: #550055;
 }
 
+input,textarea{
+    outline: none;
+}
+
 ::-webkit-scrollbar {
     width: 5px;
     height: 5px;
@@ -43,9 +47,44 @@ body{
     background: #00000044;
     top: 0px;
     left: 0px;
-    border-radius: 10px;
-    border: none;
+    border-radius: 5px;
+    border: #777777 solid 1px;
     position: fixed;
-    height: 60px;
+    height: 266px;
     width: 250px;
+}
+
+.panel-activities:hover, .panel-notification:hover, .panel-status:hover, .panel-active-app:hover {
+    background: #ffffff44;
+    border-radius: 50px;
+    transition-duration: 0.2s;
+}
+
+.menu-searchbox{
+    position: fixed;
+    top: 45px;
+    height: 28px;
+    left: calc(50% - 110px);
+    width: 298px;
+    border-radius: 15px;
+    background: #111111;
+    border: #777777 solid 1px;
+    display: grid;
+    grid-template-columns: 35px auto;
+    align-items: center;
+}
+
+.menu-searchbox  > input{
+    padding: 0px;
+    height: 28px;
+    border: none;
+    background: #111111;
+    color: #ffffff;
+    border-radius: 15px;
+}
+
+.menu-searchbox > img{
+    filter: brightness(2);
+    height: 24px;
+    justify-self: center;
 }

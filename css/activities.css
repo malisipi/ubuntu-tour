@@ -1,0 +1,18 @@
+.activities{
+    position: fixed;
+    top: 26px;
+    left: 80px;
+    width: calc(100% - 80px);
+    height: calc(100% - 26px);
+    z-index: 99999999999999999999999999999999999999999;
+    background: #222222;
+}
+
+.activities-wallpaper{
+    position: fixed;
+    top: 106px;
+    left: 120px;
+    width: calc(100% - 160px);
+    height: calc(100% - 146px);
+    border-radius: 30px;
+}
