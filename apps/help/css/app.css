@@ -8,12 +8,14 @@
     position: absolute;
     top: 0px;
     left: 0px;
+    border-radius: 3px 0px 0px 3px;
 }
 
 #forward{
     position: absolute;
     top: 0px;
     left: 30px;
+    border-radius: 0px 3px 3px 0px;
 }
 
 #bookmarks{

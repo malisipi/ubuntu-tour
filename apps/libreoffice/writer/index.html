@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../css/Font.css">
+    <title>Writer</title>
+    <style>
+        body{
+            background: #2C2C2C;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        @media screen and (max-width: 950px) {
+            textarea {
+                right:0px !important;
+                left:0px !important;
+                transform: translate(0px,0px) !important;
+            }
+        }
+
+        textarea{
+            left: 50%;
+            transform: translate(-50%,0px); 
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #2C2C2C; 
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #888888; 
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #cccccc; 
+        }
+
+        ::-webkit-scrollbar-corner{
+            background: #2C2C2C;
+        }
+
+        ::selection{
+            background: #F7B33F;
+        }
+    </style>
+    <script>
+        function itsjustdemo(){
+            alert("It's just a demo :)");
+        }
+    </script>
+</head>
+<body>
+    <img draggable="false" onclick="itsjustdemo();" src="_top.png" style="position: fixed; top: 0px; left: 0px;"/>
+    <img draggable="false" onclick="itsjustdemo();" src="_side.png" style="position: fixed; top: 100px; right: 0px;"/>
+    <img draggable="false" onclick="itsjustdemo();" src="_bottom.png" style="position: fixed; bottom: 0px; right: 0px;"/>
+    <div style="position: fixed;top: 120px;left: 20px; width: calc(100% - 90px); height: calc(100% - 140px); overflow: auto;">
+        <textarea spellcheck="false" style="position: absolute; width: 874px; height: 1240px; resize: none; border: none; outline: none; padding: 0px; overflow: hidden; font-size: 12pt;"></textarea>
+    </div>
+</body>
+</html>

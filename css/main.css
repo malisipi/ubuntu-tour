@@ -52,6 +52,7 @@ input,textarea{
     position: fixed;
     height: 266px;
     width: 250px;
+    box-shadow: 0px 0px 10px #220022;
 }
 
 .panel-activities:hover, .panel-notification:hover, .panel-status:hover, .panel-active-app:hover {

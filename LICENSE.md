@@ -6,6 +6,8 @@
 
 * icons/unsplash licensed by [Unsplash License](./LICENSE_UNSPLASH.txt). (Read icons/unsplash/Attribution.html to learn about)
 
+* 7.css licensed by [MIT License](./LICENSE_MIT.css) [Github](https://github.com/khang-nd/7.css)
+
 * Bootstrap Icons licensed by [Mit License](./LICENSE_MIT.txt)
 
 * Brython licensed by [BSD-3-Clause License](./LICENCE_BSD3Clause.TXT)
@@ -17,3 +19,5 @@
 > WineHQ are registered trademarks of WineHQ.
 
 > Python are registered trademarks of Python Software Foundation.
+
+> LibreOffice are registered trademarks of The Document Foundation.

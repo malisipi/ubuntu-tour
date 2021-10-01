@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../css/Font.css">
+    <title>Writer</title>
+    <style>
+        body{
+            background: #2C2C2C;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #2C2C2C; 
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #888888; 
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #cccccc; 
+        }
+
+        ::-webkit-scrollbar-corner{
+            background: #2C2C2C;
+        }
+
+        ::selection{
+            background: #F7B33F;
+        }
+    </style>
+    <script>
+        function itsjustdemo(){
+            alert("It's just a demo :)");
+        }
+    </script>
+</head>
+<body>
+    <img draggable="false" onclick="itsjustdemo();" src="_top.png" style="position: fixed; top: 0px; left: 0px;"/>
+    <img draggable="false" onclick="itsjustdemo();" src="_top2.png" style="position: fixed; top: 100px; left: 0px;"/>
+    <img draggable="false" onclick="itsjustdemo();" src="_side.png" style="position: fixed; top: 100px; right: 0px;"/>
+    <img draggable="false" onclick="itsjustdemo();" src="_bottom_right.png" style="position: fixed; bottom: 0px; right: 0px;"/>
+    <img draggable="false" onclick="itsjustdemo();" src="_bottom_left.png" style="position: fixed; bottom: 0px; left: 0px;"/>
+    <div style="position: fixed;top: 160px;left: 20px; width: calc(100% - 90px); height: calc(100% - 205px); overflow: auto;">
+        <!--<input type="text" spellcheck="false" style="width: 75px; height: 25px; resize: none; border: none; outline: none; padding: 0px; overflow: hidden; font-size: 12pt; color: #000000; border-right: #777777 1px solid; border-bottom: #777777 1px solid;"/>-->
+        <script>
+            for(var _x=0; _x<1000; _x++){
+                document.write("<input type=\"text\" spellcheck=\"false\" style=\"width: 75px; height: 25px; resize: none; border: none; outline: none; padding: 0px; overflow: hidden; font-size: 12pt; color: #000000; border-right: #777777 1px solid; border-bottom: #777777 1px solid;\"/>")
+            }
+        </script>
+    </div>
+</body>
+</html>

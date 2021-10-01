@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notepad</title>
+    <link rel="stylesheet" href="css/7.css">
+    <style>
+        body{
+            background: #dfdfdf;
+        }
+
+        .menubar{
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+        }
+
+        textarea{
+            padding: 0px;
+            position: fixed;
+            top: 26px;
+            width: 100%;
+            left: 0px;
+            height: calc(100% - 26px);
+            resize: none;
+            outline: none;
+            border: none;
+            z-index: -1;
+        }
+    </style>
+    <script>
+        function itsjustdemo(){
+            alert("It's just a demo :)");
+        }
+    </script>
+</head>
+<body>
+    <ul role="menubar" class="menubar">
+        <li role="menuitem" tabindex="0" aria-haspopup="true">
+          File
+          <ul role="menu">
+            <li role="menuitem"><a onclick="itsjustdemo();">Open</a></li>
+            <li role="menuitem"><a onclick="itsjustdemo();">Save</a></li>
+            <li role="menuitem" class="has-divider"><a onclick="itsjustdemo();">Save As...</a></li>
+            <li role="menuitem"><a onclick="itsjustdemo();">Exit</a></li>
+          </ul>
+        </li>
+        <li role="menuitem" tabindex="0" aria-haspopup="true">
+          Edit
+          <ul role="menu">
+            <li role="menuitem"><a onclick="itsjustdemo();">Undo</a></li>
+            <li role="menuitem"><a onclick="itsjustdemo();">Copy</a></li>
+            <li role="menuitem"><a onclick="itsjustdemo();">Cut</a></li>
+            <li role="menuitem" class="has-divider"><a onclick="itsjustdemo();">Paste</a></li>
+            <li role="menuitem"><a onclick="itsjustdemo();">Delete</a></li>
+            <li role="menuitem"><a onclick="itsjustdemo();">Find...</a></li>
+            <li role="menuitem"><a onclick="itsjustdemo();">Replace...</a></li>
+            <li role="menuitem"><a onclick="itsjustdemo();">Go to...</a></li>
+          </ul>
+        </li>
+        <li role="menuitem" tabindex="0" aria-haspopup="true">
+          View
+          <ul role="menu">
+            <li role="menuitem" tabindex="0" aria-haspopup="true">
+              Zoom
+              <ul role="menu">
+                <li role="menuitem"><a onclick="itsjustdemo();">Zoom In</a></li>
+                <li role="menuitem"><a onclick="itsjustdemo();">Zoom Out</a></li>
+              </ul>
+            </li>
+            <li role="menuitem"><a onclick="itsjustdemo();">Status Bar</a></li>
+          </ul>
+        </li>
+        <li role="menuitem" tabindex="0" aria-haspopup="true">
+          Help
+          <ul role="menu">
+            <li role="menuitem"><a onclick="itsjustdemo();">View Help</a></li>
+            <li role="menuitem"><a onclick="itsjustdemo();">About</a></li>
+          </ul>
+        </li>
+      </ul>
+      <textarea spellcheck="false"></textarea>
+</body>
+</html>

@@ -27,6 +27,7 @@
     left: calc(50% - 40px);
     height: 90px;
     width: 160px;
+    box-shadow: 0px 0px 10px #220022;
 }
 
 .app-menu-app {

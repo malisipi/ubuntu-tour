@@ -9,20 +9,23 @@
     position: absolute;
     top: 0px;
     left: 0px;
+    border-radius: 3px 0px 0px 3px;
 }
 
 #zoomNumber{
     position: absolute;
     top: 0px;
-    width: 96px;
+    width: 99px;
     left: 30px;
     text-align: center;
+    border-radius: 0px;
 }
 
 #zoom-in{
     position: absolute;
     top:0px;
     left: 130px;
+    border-radius: 0px 3px 3px 0px;
 }
 
 #fullscreen{

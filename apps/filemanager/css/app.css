@@ -21,19 +21,21 @@
     position: absolute;
     top: 0px;
     left: 0px;
+    border-radius: 3px 0px 0px 3px;
 }
 
 #forward{
     position: absolute;
     top: 0px;
     left: 30px;
+    border-radius: 0px 3px 3px 0px;
 }
 
 #url-bar{
     position: absolute;
     top:0px;
     left: 70px;
-    width: calc(100% - 209px);
+    width: calc(100% - 212px);
 }
 
 #searchAnything{
@@ -46,12 +48,14 @@
     position: absolute;
     right: 65px;
     top: 0px;
+    border-radius: 3px 0px 0px 3px;
 }
 
 #changeLook{
     position: absolute;
     right: 35px;
     top: 0px;
+    border-radius: 0px 3px 3px 0px;
 }
 
 #menu{

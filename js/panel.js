@@ -7,7 +7,7 @@ function UpdatePanelTime(){
 
 setInterval(UpdatePanelTime,1000)
 
-function changePanelActiveAppIcon(icon,name){
+function changePanelActiveAppIcon(icon,name,brightness=1){
     if(name==""){
         document.querySelector(".panel-active-app").hidden=true;
     }else{
@@ -15,6 +15,7 @@ function changePanelActiveAppIcon(icon,name){
     }
     document.getElementsByClassName("panel-active-app-icon")[0].src=icon;
     document.getElementsByClassName("panel-active-app-name")[0].innerText=name;
+    document.querySelector(".panel-active-app-icon").style.filter="brightness("+brightness+") grayscale(1)"
     setTimeout(() => {
         document.querySelector(".panel-active-app").style.width=Math.abs(document.getElementsByClassName("panel-active-app-icon")[0].getBoundingClientRect().left-document.getElementsByClassName("panel-active-app-name")[0].getBoundingClientRect().right)-(-20)+"px";
     }, 1);

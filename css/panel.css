@@ -104,6 +104,7 @@
     border: #222222 2px solid;
     border-radius: 5px;
     border: #777777 solid 1px;
+    box-shadow: 0px 0px 10px #220022;
 }
 
 .notification-about{
@@ -116,4 +117,5 @@
     border: #222222 2px solid;
     border-radius: 5px;
     border: #777777 solid 1px;
+    box-shadow: 0px 0px 10px #220022;
 }

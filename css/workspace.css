@@ -1,0 +1,23 @@
+.workspaces{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 999999999999999999999999999999999999999999;
+    width: 200px;
+    height: 120px;
+    border-radius: 12px;
+    background: #222222;
+    box-shadow: 0px 0px 10px #220022;
+    border: #220022 1px solid;
+}
+
+.workspace-now{
+    position: absolute;
+    width: 180px;
+    height: 100px;
+    left: 10px;
+    top: 10px;
+    border-radius: 10px;
+    background: #F7B33F;
+}

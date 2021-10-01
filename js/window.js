@@ -188,9 +188,10 @@ function window_restore(w){
     document.getElementById(w).style.borderTopRightRadius="10px";
 }
 
-function window_create(name,url,title,icon){
+function window_create(name,url,title,icon,icon_grayscale="",icon_brightness=1){
+    if(icon_grayscale=="") icon_grayscale=icon;
     hideAppMenu();
-    document.getElementsByClassName("dock")[0].insertAdjacentHTML('afterend',"<div id=\""+name+"\" onmousedown=\"changePanelActiveAppIcon('"+icon+"','"+title+"');changeWindowZIndex('"+name+"');\" class=\"window\">\
+    document.getElementsByClassName("dock")[0].insertAdjacentHTML('afterend',"<div id=\""+name+"\" onmousedown=\"changePanelActiveAppIcon('"+icon_grayscale+"','"+title+"',"+icon_brightness+");changeWindowZIndex('"+name+"');\" class=\"window\">\
         <div id=\""+name+"-titlebar\" class=\"window-titlebar\">\
             <div class=\"window-titlebar-title\">"+title+"</div>\
             <div class=\"window-titlebar-control\">\
@@ -206,13 +207,14 @@ function window_create(name,url,title,icon){
         <div class=\"dock-app-active\"></div>\
         <img class=\"dock-app\" onclick=\"window_minimize('"+name+"');\" draggable=\"false\" src=\""+icon+"\"/>\
     </div>";
-    changePanelActiveAppIcon(icon,title);
+    changePanelActiveAppIcon(icon_grayscale,title,icon_brightness);
     changeWindowZIndex(name);
 }
 
-function window_create_special(name,url,title,icon){
+function window_create_special(name,url,title,icon,icon_grayscale="",icon_brightness=1){
+    if(icon_grayscale=="") icon_grayscale=icon;
     hideAppMenu();
-    document.getElementsByClassName("dock")[0].insertAdjacentHTML('afterend',"<div id=\""+name+"\" onmousedown=\"changePanelActiveAppIcon('"+icon+"','"+title+"');changeWindowZIndex('"+name+"');\" class=\"window\">\
+    document.getElementsByClassName("dock")[0].insertAdjacentHTML('afterend',"<div id=\""+name+"\" onmousedown=\"changePanelActiveAppIcon('"+icon_grayscale+"','"+title+"',"+icon_brightness+");changeWindowZIndex('"+name+"');\" class=\"window\">\
         <div id=\""+name+"-titlebar\" class=\"window-titlebar-special\">\
             <div class=\"window-titlebar-control\">\
                 <img class=\"window-titlebar-control-icon\" onclick=\"window_minimize('"+name+"');\" draggable=\"false\" src=\"icons/Suru/Suru/scalable/ui/window-minimize-symbolic.svg\"/>&nbsp;&nbsp;\
@@ -230,7 +232,7 @@ function window_create_special(name,url,title,icon){
         <div class=\"dock-app-active\"></div>\
         <img class=\"dock-app\" onclick=\"window_minimize('"+name+"');\" draggable=\"false\" src=\""+icon+"\"/>\
     </div>";
-    changePanelActiveAppIcon(icon,title);
+    changePanelActiveAppIcon(icon_grayscale,title,icon_brightness);
     changeWindowZIndex(name);
 }
 

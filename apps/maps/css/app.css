@@ -21,12 +21,14 @@
     position: absolute;
     top: 0px;
     left: 70px;
+    border-radius: 3px 0px 0px 3px;
 }
 
 #zoom-in{
     position: absolute;
     top:0px;
     left: 100px;
+    border-radius: 0px 3px 3px 0px;
 }
 
 #searchbar{

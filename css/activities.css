@@ -15,4 +15,5 @@
     width: calc(100% - 160px);
     height: calc(100% - 146px);
     border-radius: 30px;
+    box-shadow: 0px 0px 10px #220022;
 }
