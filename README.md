@@ -15,11 +15,11 @@ Web based Ubuntu 21.10 desktop remake. You can try latest ubuntu edition remake 
 For introduce the Ubuntu environment' beauty (on web) and for fun. :) I was inspired from [tour.ubuntu.com
 ](https://github.com/canonical-web-and-design/tour.ubuntu.com) (however not used code from this project)
 
-## You can [try it!](https://malisipi.github.io/ubuntu-tour/)
+## You can [try it!](https://malisipi.github.io/ubunt[ ] u-tour/)
 
 ## To-Do List
 
-* Increase clone apps' functionality
+* [ ] Increase clone apps' functionality
 * [ ] Create more clone application
 * [x] Update interface to similar Ubuntu 21.10 interface
 * [ ] Update interface to similar Ubuntu 22.04 interface
