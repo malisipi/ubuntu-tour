@@ -12,6 +12,8 @@
 
 * Brython licensed by [BSD-3-Clause License](./LICENCE_BSD3Clause.TXT)
 
+* Also used Geolocation Services of [CodeTabs](https://github.com/jolav/codetabs)
+
 > Ubuntu and Canonical are registered trademarks of Canonical Ltd.
 
 > Gnome are registered trademarks of Gnome.

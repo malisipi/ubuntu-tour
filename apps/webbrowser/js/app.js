@@ -11,11 +11,11 @@ function goToForward(){
 }
 
 function openNewTab(){
-    alert("It's just a demo :)");
+    parent.parent.showNotification("It's just a demo :)","","",1250);
 }
 
 function showBookmarks(){
-    alert("It's just a demo :)");
+    parent.parent.showNotification("It's just a demo :)","","",1250);
 }
 
 function goTo(){
@@ -26,7 +26,7 @@ function goTo(){
 
 
 function showMenu(){
-    alert("It's just a demo :)");
+    parent.parent.showNotification("It's just a demo :)","","",1250);
 }
 
 function reloadWebpage(){

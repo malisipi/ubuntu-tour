@@ -1,10 +1,10 @@
 .activities{
     position: fixed;
     top: 26px;
-    left: 80px;
-    width: calc(100% - 80px);
+    left: 0px;
+    width: 100%;
     height: calc(100% - 26px);
-    z-index: 99999999999999999999999999999999999999999;
+    z-index: 999999999;
     background: #222222;
 }
 

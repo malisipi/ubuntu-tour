@@ -4,5 +4,9 @@ function changeBrightness(){
 
 function openSettings(){
     parent.showStatusAbout();
-    parent.window_create_special(parent.createRandomWindowID(),'apps/settings/index.html','Settings','icons/Suru/Suru/48x48/apps/system-settings.png');
+    parent.start_app('gnome-control-center');
+}
+
+openShutdown = ()=>{
+    parent.showDialog("Shutdown Computer","Do you want to shutdown your computer?","Cancel","Shutdown","","location.href='https://github.com/malisipi/ubuntu-tour'")
 }

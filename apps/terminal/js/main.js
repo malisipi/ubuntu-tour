@@ -75,7 +75,9 @@ function runBashCommand(__command){
         return 0;
     }
     writeOutput("user@desktop:"+now_dir+"# "+now_command);
-    if(__the_command=="mkdir"||__the_command=="rmdir"||__the_command=="cp"||__the_command=="mv"||__the_command=="rm"){
+    if(parent.parent.check_app(__command.join(" "))){
+        parent.parent.start_app(__command.join(" "));
+    }else if(__the_command=="mkdir"||__the_command=="rmdir"||__the_command=="cp"||__the_command=="mv"||__the_command=="rm"){
         writeOutput(__the_command+": Read-only file system");
     }else if(__the_command==""){
         writeOutput("",0);
@@ -83,6 +85,18 @@ function runBashCommand(__command){
         writeOutput("Package manager is busy now.")
     }else if(__the_command=="su"||__the_command=="sudo"){
         writeOutput("You are already logged in as root user.")
+    }else if(__the_command=="uname"){
+        writeOutput("Linux")
+    }else if(__the_command=='notify-send'){
+        parent.parent.showNotification(__command[1],__command[2]);
+    }else if(__the_command=='wine'){
+        if(__command.length==1 || __command[1]=="--help"){
+            writeOutput("Usage: wine PROGRAM [ARGUMENTS...]   Run the specified program\n       wine --help                   Display this help and exit\n       wine --version                Output version information and exit");
+        } else if(__command[1]=="--version"){
+            writeOutput("wine-6.21")
+        } else {
+            writeOutput("Uygulama başlatılamadı veya belirtilen dosya ile ilişkili bir uygulama yok.")
+        }
     }else if(__the_command=="sh"||__the_command=="bash"){
         writeOutput(__console_info);
     }else if(__the_command=="python3"){
@@ -116,10 +130,11 @@ function runBashCommand(__command){
         }
     }else if(__the_command=="help"){
         writeOutput("\
-mkdir    rmdir   cp      mv      rm\n\
-apt-get  apt     dpkg    su      sudo\n\
-sh       bash    echo    help    clear\n\
-cd       ls      dir     python3 ")
+mkdir       rmdir   cp      mv      rm\n\
+apt-get     apt     dpkg    su      sudo\n\
+sh          bash    echo    help    clear\n\
+cd          ls      dir     python3 uname\n\
+notify-send wine")
     }else{
         writeOutput(__the_command+": Command not found")
     }

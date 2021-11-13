@@ -1,11 +1,11 @@
 newTab = () => {
-    alert("It's just a demo :)");
+    parent.parent.showNotification("It's just a demo :)","","",1250);
 }
 
 searchAnything = () => {
-    alert("It's just a demo :)");
+    parent.parent.showNotification("It's just a demo :)","","",1250);
 }
 
 openMenu = () => {
-    alert("It's just a demo :)");
+    parent.parent.showNotification("It's just a demo :)","","",1250);
 }

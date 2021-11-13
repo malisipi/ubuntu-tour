@@ -1,11 +1,11 @@
 .app-menu{
     position: fixed;
-    left:80px;
+    left:0px;
     top:26px;
     height: calc(100% - 26px);
-    width: calc(100% - 80px);
+    width: 100%;
     background: #222222;
-    z-index: 99999999999999999999999999999999999999999;
+    z-index: 999999999;
 }
 
 .app-menu-container{

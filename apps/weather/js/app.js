@@ -3,13 +3,13 @@ function reload(){
 }
 
 function showMenu(){
-    alert("It's just a demo :)");
+    parent.parent.showNotification("It's just a demo :)","","",1250);
 }
 
 function hourly(){
-    alert("It's just a demo :)");
+    parent.parent.showNotification("It's just a demo :)","","",1250);
 }
 
 function daily(){
-    alert("It's just a demo :)");
+    parent.parent.showNotification("It's just a demo :)","","",1250);
 }

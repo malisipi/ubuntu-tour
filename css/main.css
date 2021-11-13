@@ -57,7 +57,6 @@ input,textarea{
 
 .panel-activities:hover, .panel-notification:hover, .panel-status:hover, .panel-active-app:hover {
     background: #ffffff44;
-    border-radius: 50px;
     transition-duration: 0.2s;
 }
 

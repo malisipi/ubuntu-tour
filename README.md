@@ -20,9 +20,23 @@ For introduce the Ubuntu environment' beauty (on web) and for fun. :) I was insp
 ## To-Do List
 
 * Increase clone apps' functionality
-* [12] Create more clone application
+* [13] Create more clone application
 * [+] Update interface to similar Ubuntu 21.10 interface
 * [-] Update interface to similar Ubuntu 22.04 interface
+
+## App Demo Mode
+
+ You can present your demo app with that project.
+
+> `https://malisipi.github.io/ubuntu-tour/?[`name`,`icon`,`location`]`
+
+* name: Your app's name
+* icon: Your app's icon
+* location: Your app's website
+
+> You can't send notification or create a new window. Because your app demo that hosted on another domain will be blocked by CORS policy. If you need to create a more powerful app demo, You can host the project with together your app demo.
+
+> https://malisipi.github.io/ubuntu-tour/?[%22Ubuntu-Tour%22,%22https://malisipi.github.io/ubuntu-tour/%22,%22https://malisipi.github.io/ubuntu-tour/icons/Suru/Suru/scalable/places/start-here-symbolic.svg%22]
 
 ## Notes
 

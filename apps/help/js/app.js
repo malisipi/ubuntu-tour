@@ -7,15 +7,15 @@ function goToForward(){
 }
 
 function showBookmarks(){
-    alert("It's just a demo :)");
+    parent.parent.showNotification("It's just a demo :)","","",1250);
 }
 
 function searchbutton(){
-    alert("It's just a demo :)");
+    parent.parent.showNotification("It's just a demo :)","","",1250);
 }
 
 function showMenu(){
-    alert("It's just a demo :)");
+    parent.parent.showNotification("It's just a demo :)","","",1250);
 }
 
 function reloadWebpage(){

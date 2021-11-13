@@ -16,11 +16,11 @@ function zoomOut(){
 }
 
 function doFullscreen(){
-    alert("It's just a demo :)");
+    parent.parent.showNotification("It's just a demo :)","","",1250);
 }
 
 function showMenu(){
-    alert("It's just a demo :)");
+    parent.parent.showNotification("It's just a demo :)","","",1250);
 }
 
 function showImage(){

@@ -18,9 +18,14 @@
         <link rel="stylesheet" href="css/brightness.css">
         <script src="js/activities.js"></script>
         <link rel="stylesheet" href="css/activities.css">
-        <script src="js/localStorage.js"></script>
+        <script src="js/localStorage.js" defer></script>
         <script src="js/workspace.js"></script>
         <link rel="stylesheet" href="css/workspace.css">
+        <script src="js/dialogs.js"></script>
+        <link rel="stylesheet" href="css/dialog.css">
+        <script src="js/notify.js"></script>
+        <link rel="stylesheet" href="css/notify.css">
+        <script src="js/app-manager.js"></script>
     </head>
     <body oncontextmenu="return false;">
         <img src="" draggable="false" class="wallpaper" />
@@ -40,7 +45,7 @@
             <iframe class="notification-about" src="notification.html" hidden></iframe>
         </div>
         <div class="desktop" onclick="changePanelActiveAppIcon('icons/null.svg','');">
-            <div class="desktop-item" ondblclick="window_create_special(createRandomWindowID(),'apps/filemanager/index.html','Files','icons/Suru/Suru/48x48/apps/filemanager-app.png');">
+            <div class="desktop-item" ondblclick="start_app('nautilus');">
                 <img draggable="false" class="item-icon" src="icons/Suru/Suru/48x48/places/user-home.png"/><br>
                 Home
             </div>
@@ -51,27 +56,14 @@
         <div class="dock">
             <div id="dock"></div>
             <div class="dock-app-container">
-                <img class="dock-app" onclick="window_create_special(createRandomWindowID(),'apps/filemanager/index.html?open=Trash','Files','icons/Suru/Suru/48x48/apps/filemanager-app.png');" draggable="false" src="icons/Suru/Suru/48x48/places/user-trash.png">
+                <img class="dock-app" onclick="start_app('nautilus','open=Trash');" draggable="false" src="icons/Suru/Suru/48x48/places/user-trash.png">
             </div>
         </div>
         <div class="workspaces" hidden><div class="workspace-now"></div></div>
         <div class="app-menu" style="visibility: hidden;">
             <div class="menu-searchbox"><img src="icons/Suru/Suru/scalable/actions/search-symbolic.svg" draggable="false" /><input type="text" placeholder="Write to search" onfocus="this.parentNode.style.border='2px #f7b33f solid'; this.parentNode.style.transform='translate(-1px,-1px)';"  onfocusout="this.parentNode.style.border=''; this.parentNode.style.transform='';this.value='';"/></div>
             <img onclick="showHideAppMenu();" class="app-menu-container-wallpaper" />
-            <div class="app-menu-container">
-                <div class="app-menu-app"><img class="app-menu-app-image" onclick="window_create_special(createRandomWindowID(),'apps/webbrowser/index.html','Web','icons/Suru/Suru/48x48/apps/webbrowser-app.png','icons/Suru/Suru/scalable/apps/webbrowser-app-symbolic.svg',2);" draggable="false" src="icons/Suru/Suru/256x256/apps/webbrowser-app.png"/></div>
-                <div class="app-menu-app"><img class="app-menu-app-image" onclick="window_create_special(createRandomWindowID(),'apps/filemanager/index.html','Files','icons/Suru/Suru/48x48/apps/filemanager-app.png','icons/Suru/Suru/scalable/apps/filemanager-app-symbolic.svg',2);" draggable="false" src="icons/Suru/Suru/256x256/apps/filemanager-app.png"/></div>
-                <div class="app-menu-app"><img class="app-menu-app-image" onclick="window_create_special(createRandomWindowID(),'apps/imageviewer/index.html','Image Viewer','icons/Suru/Suru/48x48/apps/image-viewer-app.png','icons/Suru/Suru/scalable/apps/image-viewer-app-symbolic.svg',2);" draggable="false" src="icons/Suru/Suru/256x256/apps/image-viewer-app.png"/></div>
-                <div class="app-menu-app"><img class="app-menu-app-image" onclick="window_create_special(createRandomWindowID(),'apps/maps/index.html','Maps','icons/Suru/Suru/48x48/apps/maps-app.png','icons/Suru/Suru/scalable/apps/maps-app-symbolic.svg',2);" draggable="false" src="icons/Suru/Suru/256x256/apps/maps-app.png"/></div>
-                <div class="app-menu-app"><img class="app-menu-app-image" onclick="window_create_special(createRandomWindowID(),'apps/help/index.html','Help','icons/Suru/Suru/48x48/apps/help-app.png','icons/Suru/Suru/scalable/apps/help-app-symbolic.svg',2);" draggable="false" src="icons/Suru/Suru/256x256/apps/help-app.png"/></div>
-                <div class="app-menu-app"><img class="app-menu-app-image" onclick="window_create_special(createRandomWindowID(),'apps/settings/index.html','Settings','icons/Suru/Suru/48x48/apps/system-settings.png','icons/Suru/Suru/scalable/apps/system-settings-symbolic.svg',2);" draggable="false" src="icons/Suru/Suru/256x256/apps/system-settings.png"/></div>
-                <div class="app-menu-app"><img class="app-menu-app-image" onclick="window_create_special(createRandomWindowID(),'apps/terminal/index.html','Terminal','icons/Suru/Suru/48x48/apps/terminal-app.png','icons/Suru/Suru/scalable/apps/terminal-app-symbolic.svg',2);" draggable="false" src="icons/Suru/Suru/256x256/apps/terminal-app.png"/></div>
-                <div class="app-menu-app"><img class="app-menu-app-image" onclick="window_create_special(createRandomWindowID(),'apps/weather/index.html','Weather','icons/Suru/Suru/48x48/apps/weather-app.png','icons/Suru/Suru/scalable/apps/weather-app-symbolic.svg',2);" draggable="false" src="icons/Suru/Suru/256x256/apps/weather-app.png"/></div>
-                <div class="app-menu-app"><img class="app-menu-app-image" onclick="window_create(createRandomWindowID(),'apps/libreoffice/writer/index.html','LibreOffice Writer','icons/Suru/Suru/48x48/apps/libreoffice-writer.png','icons/Suru/Suru/scalable/mimetypes/x-office-document-symbolic.svg',2);" draggable="false" src="icons/Suru/Suru/256x256/apps/libreoffice-writer.png"/></div>
-                <div class="app-menu-app"><img class="app-menu-app-image" onclick="window_create(createRandomWindowID(),'apps/libreoffice/calc/index.html','LibreOffice Calc','icons/Suru/Suru/48x48/apps/libreoffice-calc.png','icons/Suru/Suru/scalable/mimetypes/x-office-spreadsheet-symbolic.svg',2);" draggable="false" src="icons/Suru/Suru/256x256/apps/libreoffice-calc.png"/></div>
-                <div class="app-menu-app"><img class="app-menu-app-image" onclick="window_create(createRandomWindowID(),'https://paint.js.org','Paint - WineHQ','https://paint.js.org/assets/icon.png');" draggable="false" src="https://paint.js.org/assets/icon.png"/></div>
-                <div class="app-menu-app"><img class="app-menu-app-image" onclick="window_create(createRandomWindowID(),'apps/wine/notepad.html','Notepad - WineHQ','icons/Suru/Suru/48x48/apps/wine.png','icons/Suru/Suru/scalable/apps/wine-symbolic.svg',2);" draggable="false" src="icons/Suru/Suru/256x256/apps/wine.png"/></div>
-            </div>
+            <div class="app-menu-container"></div>
         </div>
         <div class="activities" style="visibility: hidden;">
             <div class="menu-searchbox"><img src="icons/Suru/Suru/scalable/actions/search-symbolic.svg" draggable="false" /><input type="text" placeholder="Write to search" onfocus="this.parentNode.style.border='2px #f7b33f solid'; this.parentNode.style.transform='translate(-1px,-1px)';"  onfocusout="this.parentNode.style.border=''; this.parentNode.style.transform='';this.value='';"/></div>
@@ -79,6 +71,19 @@
         </div>
         <div class="context-menu-container" onclick="showHideContextMenu();" hidden>
             <iframe class="context-menu" src="contextmenu.html"></iframe>
+        </div>
+        <div id="dialog-box-container" hidden>
+            <div id="dialog-box">
+                <div id="dialog-title"></div>
+                <div id="dialog-text"></div>
+                <div id="dialog-option-1" onclick="document.querySelector('#dialog-box-container').hidden=true;new Function(__dialog_opt1)();">Cancel</div>
+                <div id="dialog-option-2" onclick="document.querySelector('#dialog-box-container').hidden=true;new Function(__dialog_opt2)();">OK</div>
+            </div>
+        </div>
+        <div id="notify-box" onclick="if(window.event.target.id!='notify-close'){new Function(__notify_action)();};document.querySelector('#notify-box').hidden=true;" hidden>
+            <div id="notify-title">Title</div>
+            <div id="notify-text">Text</div>
+            <img id="notify-close" src="icons/Suru/Suru/scalable/ui/window-close-symbolic.svg"/>
         </div>
         <div class="brightness" id="brightness"></div>
     </body>

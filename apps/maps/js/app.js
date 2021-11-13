@@ -1,9 +1,9 @@
 function myLocation(){
-    alert("It's just a demo :)")
+    parent.parent.showNotification("It's just a demo :)","","",1250);
 }
 
 function layers(){
-    alert("It's just a demo :)")
+    parent.parent.showNotification("It's just a demo :)","","",1250);
 }
 
 function zoomIn(){
@@ -17,15 +17,15 @@ function zoomOut(){
 }
 
 function star(){
-    alert("It's just a demo :)");
+    parent.parent.showNotification("It's just a demo :)","","",1250);
 }
 
 function showMenu(){
-    alert("It's just a demo :)");
+    parent.parent.showNotification("It's just a demo :)","","",1250);
 }
 
 function goTo(){
     if (window.event.keyCode == '13'){
-        alert("It's just a demo :)");
+        parent.parent.showNotification("It's just a demo :)","","",1250);
     }
 }

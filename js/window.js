@@ -1,142 +1,54 @@
+__set_movable = (obj,_mv,s="") => {
+    if(_mv){
+        document.getElementById(obj.id+"-titlebar"+s).onmousedown = function(e) {
+            pointerX = e.clientX;
+            pointerY = e.clientY;
+            document.onmouseup = function(){
+                document.onmouseup = null;
+                document.onmousemove = null;};
+                document.onmousemove =  function(e) {
+                    pointerXmove = pointerX - e.clientX;
+                    pointerYmove = pointerY - e.clientY
+                    pointerX = e.clientX
+                    pointerY = e.clientY;
+                    obj.style.top = (obj.offsetTop - pointerYmove) + 'px';
+                    obj.style.left = (obj.offsetLeft - pointerXmove) + 'px';
+        };};
+
+        document.getElementById(obj.id+"-titlebar"+s).ontouchstart = function(e) {
+            pointerX = e.touches[0].clientX;
+            pointerY = e.touches[0].clientY;
+            document.ontouchend = function(){
+                document.ontouchend = null;
+                document.ontouchmove = null;};
+                document.ontouchmove =  function(e) {
+                    pointerXmove = pointerX - e.touches[0].clientX;
+                    pointerYmove = pointerY - e.touches[0].clientY
+                    pointerX = e.touches[0].clientX
+                    pointerY = e.touches[0].clientY;
+                    obj.style.top = (obj.offsetTop - pointerYmove) + 'px';
+                    obj.style.left = (obj.offsetLeft - pointerXmove) + 'px';
+        };};
+    } else {
+        document.getElementById(obj.id+"-titlebar").onmousedown = function(e) {};
+        document.getElementById(obj.id+"-titlebar").ontouchstart = function(e) {};    
+    }
+}
+
 function AllowMovable(obj) {
-    document.getElementById(obj.id+"-titlebar").onmousedown = function(e) {
-        pointerX = e.clientX;
-        pointerY = e.clientY;
-        document.onmouseup = function(){
-            document.onmouseup = null;
-            document.onmousemove = null;};
-            document.onmousemove =  function(e) {
-                pointerXmove = pointerX - e.clientX;
-                pointerYmove = pointerY - e.clientY
-                pointerX = e.clientX
-                pointerY = e.clientY;
-                obj.style.top = (obj.offsetTop - pointerYmove) + 'px';
-                obj.style.left = (obj.offsetLeft - pointerXmove) + 'px';
-  };};
-  
-    document.getElementById(obj.id+"-titlebar").ontouchstart = function(e) {
-        pointerX = e.touches[0].clientX;
-        pointerY = e.touches[0].clientY;
-        document.ontouchend = function(){
-            document.ontouchend = null;
-            document.ontouchmove = null;};
-            document.ontouchmove =  function(e) {
-                pointerXmove = pointerX - e.touches[0].clientX;
-                pointerYmove = pointerY - e.touches[0].clientY
-                pointerX = e.touches[0].clientX
-                pointerY = e.touches[0].clientY;
-                obj.style.top = (obj.offsetTop - pointerYmove) + 'px';
-                obj.style.left = (obj.offsetLeft - pointerXmove) + 'px';
-  };};
+    __set_movable(obj,true)
 
-  if (JSON.stringify(document.getElementById(obj.id+"-titlebar2")) != "null") { // For special titlebars
-
-    document.getElementById(obj.id+"-titlebar2").onmousedown = function(e) {
-        pointerX = e.clientX;
-        pointerY = e.clientY;
-        document.onmouseup = function(){
-            document.onmouseup = null;
-            document.onmousemove = null;};
-            document.onmousemove =  function(e) {
-                pointerXmove = pointerX - e.clientX;
-                pointerYmove = pointerY - e.clientY
-                pointerX = e.clientX
-                pointerY = e.clientY;
-                obj.style.top = (obj.offsetTop - pointerYmove) + 'px';
-                obj.style.left = (obj.offsetLeft - pointerXmove) + 'px';
-  };};
-  
-    document.getElementById(obj.id+"-titlebar2").ontouchstart = function(e) {
-        pointerX = e.touches[0].clientX;
-        pointerY = e.touches[0].clientY;
-        document.ontouchend = function(){
-            document.ontouchend = null;
-            document.ontouchmove = null;};
-            document.ontouchmove =  function(e) {
-                pointerXmove = pointerX - e.touches[0].clientX;
-                pointerYmove = pointerY - e.touches[0].clientY
-                pointerX = e.touches[0].clientX
-                pointerY = e.touches[0].clientY;
-                obj.style.top = (obj.offsetTop - pointerYmove) + 'px';
-                obj.style.left = (obj.offsetLeft - pointerXmove) + 'px';
-  };};
-
-  document.getElementById(obj.id+"-titlebar3").onmousedown = function(e) {
-    pointerX = e.clientX;
-    pointerY = e.clientY;
-    document.onmouseup = function(){
-        document.onmouseup = null;
-        document.onmousemove = null;};
-        document.onmousemove =  function(e) {
-            pointerXmove = pointerX - e.clientX;
-            pointerYmove = pointerY - e.clientY
-            pointerX = e.clientX
-            pointerY = e.clientY;
-            obj.style.top = (obj.offsetTop - pointerYmove) + 'px';
-            obj.style.left = (obj.offsetLeft - pointerXmove) + 'px';
-};};
-
-document.getElementById(obj.id+"-titlebar3").ontouchstart = function(e) {
-    pointerX = e.touches[0].clientX;
-    pointerY = e.touches[0].clientY;
-    document.ontouchend = function(){
-        document.ontouchend = null;
-        document.ontouchmove = null;};
-        document.ontouchmove =  function(e) {
-            pointerXmove = pointerX - e.touches[0].clientX;
-            pointerYmove = pointerY - e.touches[0].clientY
-            pointerX = e.touches[0].clientX
-            pointerY = e.touches[0].clientY;
-            obj.style.top = (obj.offsetTop - pointerYmove) + 'px';
-            obj.style.left = (obj.offsetLeft - pointerXmove) + 'px';
-};};
-
-document.getElementById(obj.id+"-titlebar4").onmousedown = function(e) {
-    pointerX = e.clientX;
-    pointerY = e.clientY;
-    document.onmouseup = function(){
-        document.onmouseup = null;
-        document.onmousemove = null;};
-        document.onmousemove =  function(e) {
-            pointerXmove = pointerX - e.clientX;
-            pointerYmove = pointerY - e.clientY
-            pointerX = e.clientX
-            pointerY = e.clientY;
-            obj.style.top = (obj.offsetTop - pointerYmove) + 'px';
-            obj.style.left = (obj.offsetLeft - pointerXmove) + 'px';
-};};
-
-document.getElementById(obj.id+"-titlebar4").ontouchstart = function(e) {
-    pointerX = e.touches[0].clientX;
-    pointerY = e.touches[0].clientY;
-    document.ontouchend = function(){
-        document.ontouchend = null;
-        document.ontouchmove = null;};
-        document.ontouchmove =  function(e) {
-            pointerXmove = pointerX - e.touches[0].clientX;
-            pointerYmove = pointerY - e.touches[0].clientY
-            pointerX = e.touches[0].clientX
-            pointerY = e.touches[0].clientY;
-            obj.style.top = (obj.offsetTop - pointerYmove) + 'px';
-            obj.style.left = (obj.offsetLeft - pointerXmove) + 'px';
-};};
-
-
-  }
-
+    if (document.getElementById(obj.id+"-titlebar2") != null) { // For special titlebars
+        [2,3,4].forEach(s=>{__set_movable(obj,true,s)})
+    }
 }
 
 function DisableMovable(w) {
     obj=document.getElementById(w);
-    document.getElementById(obj.id+"-titlebar").onmousedown = function(e) {};
-    document.getElementById(obj.id+"-titlebar").ontouchstart = function(e) {};
-    if (JSON.stringify(document.getElementById(obj.id+"-titlebar2")) != "null") { // For special titlebars
-        document.getElementById(obj.id+"-titlebar2").onmousedown = function(e) {};
-        document.getElementById(obj.id+"-titlebar2").ontouchstart = function(e) {};
-        document.getElementById(obj.id+"-titlebar3").onmousedown = function(e) {};
-        document.getElementById(obj.id+"-titlebar3").ontouchstart = function(e) {};
-        document.getElementById(obj.id+"-titlebar4").onmousedown = function(e) {};
-        document.getElementById(obj.id+"-titlebar4").ontouchstart = function(e) {};
+    __set_movable(obj,false)
+
+    if (document.getElementById(obj.id+"-titlebar2") != null) { // For special titlebars
+        [2,3,4].forEach(s=>{__set_movable(obj,false,s)})
     }
 }
 
@@ -172,6 +84,7 @@ function window_maximize(w){
     document.getElementById(w).style.border="none";
     document.getElementById(w).style.borderTopLeftRadius="0px";
     document.getElementById(w).style.borderTopRightRadius="0px";
+    document.getElementById(w).style.resize="none";
 }
 
 function window_restore(w){
@@ -186,6 +99,7 @@ function window_restore(w){
     document.getElementById(w).style.border="#220022 1px solid";
     document.getElementById(w).style.borderTopLeftRadius="10px";
     document.getElementById(w).style.borderTopRightRadius="10px";
+    document.getElementById(w).style.resize="both";
 }
 
 function window_create(name,url,title,icon,icon_grayscale="",icon_brightness=1){
@@ -209,6 +123,7 @@ function window_create(name,url,title,icon,icon_grayscale="",icon_brightness=1){
     </div>";
     changePanelActiveAppIcon(icon_grayscale,title,icon_brightness);
     changeWindowZIndex(name);
+    showNotification(title,"\""+title+"\" is ready","",2000);
 }
 
 function window_create_special(name,url,title,icon,icon_grayscale="",icon_brightness=1){
@@ -234,6 +149,7 @@ function window_create_special(name,url,title,icon,icon_grayscale="",icon_bright
     </div>";
     changePanelActiveAppIcon(icon_grayscale,title,icon_brightness);
     changeWindowZIndex(name);
+    showNotification(title,"\""+title+"\" is ready","",2000);
 }
 
 function window_delete(w){
@@ -255,3 +171,15 @@ function createRandomWindowID(){
     latest_window_id+=1;
     return "w"+latest_window_id;
 }
+
+// /?[<name>,<icon>,<location>]
+// for example; ?[%22Ubuntu-Tour%22,%22https://malisipi.github.io/ubuntu-tour/%22,%22https://malisipi.github.io/ubuntu-tour/icons/Suru/Suru/scalable/places/start-here-symbolic.svg%22]
+window.addEventListener("load",()=>{
+    if(window.location.search!=""){
+        __hide_location_confirm=1;
+        __the_app=JSON.parse(decodeURIComponent(window.location.search).replace("?",""));
+        console.info(__the_app);
+        window_create(createRandomWindowID(),__the_app[1],__the_app[0],__the_app[2]);
+        window_maximize("w1");
+    }
+});

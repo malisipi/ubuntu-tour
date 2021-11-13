@@ -97,7 +97,7 @@
     <body>
         <div class="current-weather" >
             <img id="current-logo" draggable="false" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E">
-            <div id="current-location">New York</div>
+            <div id="current-location"></div>
             <div id="current-temp">0 °C</div>
         </div>
         <div class="weather-daily"></div>
@@ -165,7 +165,9 @@
             document.querySelector("#current-logo").src=_weather_codes[data["current_weather"]["weathercode"]];
             document.querySelector("#current-temp").innerHTML=Math.round([data["current_weather"]["temperature"]])+"°C";
         };
-        xhttp.open("GET", "https://api.open-meteo.com/v1/forecast?latitude=40.71&longitude=-74.01&daily=weathercode,temperature_2m_max,temperature_2m_min&current_weather=true&timezone=Europe%2FLondon", true);
+        _location=JSON.parse(localStorage["location"]);
+        document.querySelector("#current-location").innerHTML=_location.country_name+", "+_location.city;
+        xhttp.open("GET", "https://api.open-meteo.com/v1/forecast?latitude="+_location.latitude+"&longitude="+_location.longitude+"&daily=weathercode,temperature_2m_max,temperature_2m_min&current_weather=true&timezone=Europe%2FLondon", true);
         xhttp.send();
         </script>
     </body>

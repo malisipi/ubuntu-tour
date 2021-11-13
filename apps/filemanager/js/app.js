@@ -8,22 +8,22 @@ function goToForward(){
 
 function goTo(){
     if (window.event.keyCode == '13'){
-        alert("It's just a demo :)")
+        parent.parent.showNotification("It's just a demo :)","","",1250);
     }
 }
 
 function showMenu(){
-    alert("It's just a demo :)");
+    parent.parent.showNotification("It's just a demo :)","","",1250);
 }
 
 function showAsList(){
-    alert("It's just a demo :)")
+    parent.parent.showNotification("It's just a demo :)","","",1250);
 }
 
 function changeLook(){
-    alert("It's just a demo :)")
+    parent.parent.showNotification("It's just a demo :)","","",1250);
 }
 
 function searchAnything(){
-    alert("It's just a demo :)")
+    parent.parent.showNotification("It's just a demo :)","","",1250);
 }

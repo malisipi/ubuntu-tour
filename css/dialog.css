@@ -1,0 +1,76 @@
+#dialog-box-container{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999999999999999999999999999999999999999;
+    background: #222222cc;
+}
+
+#dialog-box{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #222222;
+    width: 400px;
+    height: 175px;
+    color: #ffffff;
+    border-radius: 15px;
+    border: 1px #777777 solid;
+}
+
+#dialog-title{
+    position: absolute;
+    top: 35px;
+    left: 15px;
+    width: calc(100% - 30px);
+    text-align: center;
+    font-size: 25px;
+}
+
+#dialog-text{
+    position: absolute;
+    top: 85px;
+    left: 15px;
+    width: calc(100% - 30px);
+    text-align: center;
+    font-size: 16px;
+}
+
+#dialog-option-1{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: calc(50% - 1px);
+    background: #333333;
+    border-right: #111111 1px solid;
+    border-top: #111111 1px solid;
+    border-bottom-left-radius: 15px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    place-content: center;
+    transition-duration: 0.2s;
+}
+
+#dialog-option-2{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 50%;
+    background: #333333;
+    border-top: #111111 1px solid;
+    border-bottom-right-radius: 15px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    place-content: center;
+    transition-duration: 0.2s;
+}
+
+#dialog-option-1:hover, #dialog-option-2:hover{
+    background: #555555;
+    transition-duration: 0.2s;
+}
