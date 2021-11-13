@@ -28,7 +28,7 @@ For introduce the Ubuntu environment' beauty (on web) and for fun. :) I was insp
 
  You can present your demo app with that project.
 
-> `https://malisipi.github.io/ubuntu-tour/?[`name`,`icon`,`location`]`
+> `https://malisipi.github.io/ubuntu-tour/?[`name`,`location`,`icon`]`
 
 * name: Your app's name
 * icon: Your app's icon
