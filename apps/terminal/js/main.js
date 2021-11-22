@@ -43,7 +43,7 @@ function updateOutputs(){
 
 function updateOutputsWithCommands(){
     setTimeout(() => {
-        out.value=outputs+"\nuser@desktop:"+now_dir+"# "+now_command;
+        out.value=outputs+"\nuser@desktop:"+now_dir+"~$ "+now_command;
         out.scrollBy(0,9999999999999999999999999);
     }, 1);
 }
@@ -74,7 +74,7 @@ function runBashCommand(__command){
         clearOutputs();
         return 0;
     }
-    writeOutput("user@desktop:"+now_dir+"# "+now_command);
+    writeOutput("user@desktop:"+now_dir+"~$ "+now_command);
     if(__the_command=="mkdir"||__the_command=="rmdir"||__the_command=="cp"||__the_command=="mv"||__the_command=="rm"){
         writeOutput(__the_command+": Read-only file system");
     }else if(__the_command==""){
