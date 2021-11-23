@@ -1,6 +1,6 @@
 # Ubuntu Tour
 
-Web based Ubuntu 21.10 desktop remake. You can try latest ubuntu edition remake from [here](https://malisipi.github.io/ubuntu-tour/)
+Web based Ubuntu 21.10 desktop remake. You can try latest ubuntu edition remake from [here](https://mwalters75.github.io/ubuntu-online/)
 
 ## Features
 
@@ -10,12 +10,12 @@ Web based Ubuntu 21.10 desktop remake. You can try latest ubuntu edition remake 
 * Similar interface with Gnome (Ubuntu Tour imitate Gnome Interface however never use Gnome code.)
 * Clone applications
 
-## Why i do?
+## Why I did it?
 
 For introduce the Ubuntu environment' beauty (on web) and for fun. :) I was inspired from [tour.ubuntu.com
 ](https://github.com/canonical-web-and-design/tour.ubuntu.com) (however not used code from this project)
 
-## You can [try it!](https://malisipi.github.io/ubunt[ ] u-tour/)
+## You can [try it!](https://mwalters75.github.io/ubuntu-online/)
 
 ## To-Do List
 
