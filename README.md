@@ -1,4 +1,4 @@
-# Ubuntu Tour
+# Ubuntu Online
 
 Web based Ubuntu 21.10 desktop remake. You can try latest ubuntu edition remake from [here](https://mwalters75.github.io/ubuntu-online/)
 
