@@ -1,0 +1,49 @@
+.app-menu{
+    position: fixed;
+    left:80px;
+    top:26px;
+    height: calc(100% - 26px);
+    width: calc(100% - 80px);
+    background: #222222;
+    z-index: 99999999999999999999999999999999999999999;
+}
+
+.app-menu-container{
+    position: fixed;
+    top: 206px;
+    left: 120px;
+    width: calc(100% - 160px);
+    height: calc(100% - 246px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.app-menu-container-wallpaper{
+    position: fixed;
+    top: 98px;
+    left: calc(50% - 40px);
+    height: 90px;
+    width: 160px;
+    box-shadow: 0px 0px 10px #220022;
+}
+
+.app-menu-app {
+    width: 144px;
+    height: 144px;
+    margin: 3px;
+    border-radius: 10px;
+}
+
+.app-menu-app:hover{
+    background: #ffffff33;
+    transition-duration: 0.2s;
+}
+
+.app-menu-app-image {
+    width: 128px;
+    height: 128px;
+    transform: translate(8px,8px);
+}
