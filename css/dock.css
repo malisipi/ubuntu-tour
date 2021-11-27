@@ -2,7 +2,7 @@
     position: fixed;
     top:26px;
     left: 0px;
-    background: rgba(17, 17, 17, 0.61);
+    background: #11111193;
     width: 80px;
     z-index: 99999999999999999999999999999999999999999;
     height: calc(100% - 106px);
