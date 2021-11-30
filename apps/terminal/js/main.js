@@ -33,7 +33,7 @@ terminal_filesystem={
 out=document.querySelector("#out")
 __console_info="Welcome to Terminal";
 outputs=__console_info;
-now_dir="/";
+now_dir="";
 now_command="";
 run_python3=0;
 
