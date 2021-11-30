@@ -31,7 +31,7 @@ terminal_filesystem={
 };
 
 out=document.querySelector("#out")
-__console_info="Welcome to Terminal";
+__console_info="";
 outputs=__console_info;
 now_dir="";
 now_command="";
@@ -43,7 +43,7 @@ function updateOutputs(){
 
 function updateOutputsWithCommands(){
     setTimeout(() => {
-        out.value=outputs+"\nuser@desktop:"+now_dir+"~$ "+now_command;
+        out.value=outputs+"user@desktop:"+now_dir+"~$ "+now_command;
         out.scrollBy(0,9999999999999999999999999);
     }, 1);
 }
