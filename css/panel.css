@@ -110,7 +110,7 @@
 .notification-about{
     position: fixed;
     top: 30px;
-    left: 20px;
+    left: 8px;
     transform: translate(-50%,0%);
     width: 450px;
     height: 300px;
