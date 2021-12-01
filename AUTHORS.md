@@ -1,2 +1,3 @@
-The project developed by:
- -- malisipi
+## The project developed by:
+ - malisipi
+ - Mwalters75
