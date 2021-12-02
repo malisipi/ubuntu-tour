@@ -111,11 +111,11 @@
     position: fixed;
     top: 30px;
     left: 50%;
-    transform: translate(-50%,0%);
-    width: 450px;
+    transform: translate(-50%,10%);
+    width: 400px;
     height: 300px;
     border: #222222 2px solid;
     border-radius: 5px;
-    border: #777777 solid 1px;
+    border: #777777 solid 1px
     box-shadow: 0px 0px 10px #220022;
 }
