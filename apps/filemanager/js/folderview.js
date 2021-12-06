@@ -31,6 +31,7 @@ function openFile(theFile){
     if(theFile=="9XngoIpxcEo.jpg") aboutFile=["../../icons/unsplash/9XngoIpxcEo.jpg","picture"];
     if(theFile=="qDG7XKJLKbs.jpg") aboutFile=["../../icons/unsplash/qDG7XKJLKbs.jpg","picture"];
     if(theFile=="Tjbk79TARiE.jpg") aboutFile=["../../icons/unsplash/Tjbk79TARiE.jpg","picture"];
+    if(theFile=="untitled.png") aboutFile=["../../photos/untitled.png","picture"];
 
     if(aboutFile[1]=="picture"){
         parent.parent.window_create_special(parent.parent.createRandomWindowID(),'apps/imageviewer/index.html?file='+aboutFile[0],'Image Viewer','icons/Suru/Suru/48x48/apps/image-viewer-app.png');
