@@ -21,3 +21,5 @@
 > Python are registered trademarks of Python Software Foundation.
 
 > LibreOffice are registered trademarks of The Document Foundation.
+
+> TurboWarp is licenced by [GNU General Public License v3.0](https://github.com/TurboWarp/scratch-gui/blob/develop/LICENSE)
