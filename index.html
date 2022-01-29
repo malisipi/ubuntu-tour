@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="css/main.css">
         <script src="main.js"></script>
         <link rel="stylesheet" href="css/panel.css">
-        <script src="js/panel.js" ></script>
+        <script src="js/panel.js" defer></script>
         <link rel="stylesheet" href="css/Font.css">
         <script src="js/window.js"></script>
         <link rel="stylesheet" href="css/window.css">
@@ -39,7 +39,7 @@
             <div class="panel-status" onclick="showStatusAbout();">
                 <img class="panel-status-icon" draggable="false" src="icons/Suru/Suru/scalable/status/network-wireless-connected-symbolic.svg"/>
                 <img class="panel-status-icon" draggable="false" src="icons/Suru/Suru/scalable/status/audio-volume-high-symbolic.svg"/>
-                <img class="panel-status-icon" draggable="false" src="icons/Suru/Suru/scalable/status/battery-level-100-charging-symbolic.svg"/>
+                <img class="panel-status-icon" draggable="false" id="battery" src="icons/Suru/Suru/scalable/status/battery-level-100-charging-symbolic.svg"/>
             </div>
             <iframe class="status-about" src="status.html" hidden></iframe>
             <iframe class="notification-about" src="notification.html" hidden></iframe>

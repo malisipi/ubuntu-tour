@@ -1,4 +1,22 @@
-monthShortNames=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+monthShortNames=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+if(navigator.getBattery!=undefined){
+    batteryIcon=document.querySelector("#battery");
+    (async ()=>{
+        deviceBattery=await navigator.getBattery();
+
+        updateBatteryIcon=()=>{
+            if(deviceBattery.charging){
+                batteryIcon.src="icons/Suru/Suru/scalable/status/battery-level-"+(Math.round(deviceBattery.level*10)*10)+"-charging-symbolic.svg";
+            } else {
+                batteryIcon.src="icons/Suru/Suru/scalable/status/battery-level-"+(Math.round(deviceBattery.level*10)*10)+"-symbolic.svg";
+            }
+        }
+        updateBatteryIcon();
+        
+        deviceBattery.addEventListener("chargingchange",updateBatteryIcon);
+        deviceBattery.addEventListener("levelchange",updateBatteryIcon);
+    })();
+}
 
 function UpdatePanelTime(){
     now = new Date();
