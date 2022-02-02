@@ -94,6 +94,11 @@
     transition-duration: 0.2s;
 }
 
+.panel-status-no-wifi{
+    grid-template-columns: 0px auto auto !important;
+    width: 55px !important;
+}
+
 .panel-status-icon{
     height: 16px;
     filter: brightness(2);

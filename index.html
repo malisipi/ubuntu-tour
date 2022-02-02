@@ -3,8 +3,9 @@
     <head>
         <title>Ubuntu</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="icons/Suru/Suru/scalable/places/start-here-symbolic.svg" type="image/x-icon">  
+        <link rel="shortcut icon" href="icons/Suru/Suru/scalable/places/start-here-symbolic.svg" type="image/x-icon">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/login.css" id="login-css">
         <script src="main.js"></script>
         <link rel="stylesheet" href="css/panel.css">
         <script src="js/panel.js" defer></script>
@@ -26,6 +27,17 @@
         <script src="js/notify.js"></script>
         <link rel="stylesheet" href="css/notify.css">
         <script src="js/app-manager.js"></script>
+        <script src="js/login.js"></script>
+        <!-- PWA support -->
+        <link rel="manifest" href="manifest.webmanifest">
+        <script src="js/pwa.js"></script>
+        <!-- PWA support for iOS -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="550055">
+        <meta name="apple-mobile-web-app-title" content="Ubuntu">
+        <meta name="msapplication-TileImage" content="assets/144.png">
+        <meta name="msapplication-TileColor" content="#550055">
+        <link rel="apple-touch-icon" href="assets/144.png">
     </head>
     <body oncontextmenu="return false;">
         <img src="" draggable="false" class="wallpaper" />
@@ -37,8 +49,8 @@
             </div>
             <div class="panel-notification" onclick="showNotificationAbout();"></div>
             <div class="panel-status" onclick="showStatusAbout();">
-                <img class="panel-status-icon" draggable="false" src="icons/Suru/Suru/scalable/status/network-wireless-connected-symbolic.svg"/>
-                <img class="panel-status-icon" draggable="false" src="icons/Suru/Suru/scalable/status/audio-volume-high-symbolic.svg"/>
+                <img class="panel-status-icon" draggable="false" id="wifi" src="icons/Suru/Suru/scalable/status/network-wireless-connected-symbolic.svg"/>
+                <img class="panel-status-icon" draggable="false" id="sound" src="icons/Suru/Suru/scalable/status/audio-volume-high-symbolic.svg"/>
                 <img class="panel-status-icon" draggable="false" id="battery" src="icons/Suru/Suru/scalable/status/battery-level-100-charging-symbolic.svg"/>
             </div>
             <iframe class="status-about" src="status.html" hidden></iframe>
@@ -85,6 +97,11 @@
             <div id="notify-text">Text</div>
             <img id="notify-close" src="icons/Suru/Suru/scalable/ui/window-close-symbolic.svg"/>
         </div>
+        <div class="login-user" style="display: none;" onclick="loginSession();">
+            <img src="icons/Suru/Suru/scalable/status/avatar-default-symbolic.svg"/>
+            <div>User</div>
+        </div>
+        <div class="login-ubuntu" style="display: none;">ubuntu</div>
         <div class="brightness" id="brightness"></div>
     </body>
 </html>

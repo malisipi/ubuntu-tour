@@ -2,7 +2,7 @@
 
 * css/UbuntuRegular.ttf licensed by [Ubuntu Font License](./LICENSE_UFL.txt).
 
-* icons/Suru licensed by [Creative Commons Attribution-ShareAlike 4.0 License](./LICENSE_CCBYSA.txt). (Read icons/Suru/README.md and cons/Suru/CONTRIBUTING.md to learn about)(Forked from https://github.com/ubuntu/yaru)
+* icons/Suru and assets licensed by [Creative Commons Attribution-ShareAlike 4.0 License](./LICENSE_CCBYSA.txt). (Read icons/Suru/README.md and cons/Suru/CONTRIBUTING.md to learn about)(Forked from https://github.com/ubuntu/yaru)
 
 * icons/unsplash licensed by [Unsplash License](./LICENSE_UNSPLASH.txt). (Read icons/unsplash/Attribution.html to learn about)
 

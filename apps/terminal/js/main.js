@@ -93,9 +93,9 @@ function runBashCommand(__command){
         if(__command.length==1 || __command[1]=="--help"){
             writeOutput("Usage: wine PROGRAM [ARGUMENTS...]   Run the specified program\n       wine --help                   Display this help and exit\n       wine --version                Output version information and exit");
         } else if(__command[1]=="--version"){
-            writeOutput("wine-6.21")
+            writeOutput("wine-7.0-rc5")
         } else {
-            writeOutput("Uygulama başlatılamadı veya belirtilen dosya ile ilişkili bir uygulama yok.")
+            writeOutput("The application could not be started or there is no application associated with the specified file.")
         }
     }else if(__the_command=="sh"||__the_command=="bash"){
         writeOutput(__console_info);

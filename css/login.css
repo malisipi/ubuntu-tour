@@ -1,0 +1,55 @@
+*:not(body,html){
+    visibility:hidden !important;
+}
+
+.panel-notification, .panel-status, .panel-status > *, .login-user, .login-user > *, .login-ubuntu{
+    visibility: visible !important;
+}
+
+.panel-notification, .panel-status{
+    pointer-events: none;
+}
+
+.login-user, .login-ubuntu{
+    display: unset !important;
+}
+
+.login-user{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: 0;
+    background: #66666666;
+    border-radius: 5px;
+    width: 260px;
+    height: 65px;
+    color: #ffffff;
+}
+
+.login-user > img {
+    position: relative;
+    top: 8.5px;
+    left: 8.5px;
+    width: 48px;
+    height: 48px;
+    filter: brightness(2);
+    border-radius: 50%;
+    background: #33333333;
+}
+
+.login-user > div{
+    position: relative;
+    bottom: 29px;
+    left: 65px;
+    font-size: 18px;
+}
+
+.login-ubuntu{
+    position: fixed;
+    bottom: 20px;
+    font-size: 45px;
+    color: #ffffff;
+    left: 50%;
+    transform: translate(-50%,0);
+}
