@@ -3,25 +3,25 @@
   "name": "Ubuntu",
   "icons": [
     {
-      "src": "/assets/Vector.svg",
+      "src": "./assets/Vector.svg",
       "type": "image/svg+xml",
       "sizes": "512x512"
     },
     {
-      "src": "/assets/192.png",
+      "src": "./assets/192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/assets/512.png",
+      "src": "./assets/512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
-  "start_url": "/?pwa=true",
+  "start_url": "./?pwa=true",
   "background_color": "#550055",
   "display": "fullscreen",
-  "scope": "/",
+  "scope": "./",
   "theme_color": "#550055",
   "shortcuts": [],
   "description": "Ubuntu",
