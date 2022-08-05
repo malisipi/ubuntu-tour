@@ -1,8 +1,8 @@
-*:not(body,html){
+*{
     visibility:hidden !important;
 }
 
-.panel-notification, .panel-status, .panel-status > *, .login-user, .login-user > *, .login-ubuntu{
+.panel-notification, .panel-status, .panel-status > *, .login-user, .login-user > *, .login-ubuntu, body, html{
     visibility: visible !important;
 }
 

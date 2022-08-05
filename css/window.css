@@ -7,15 +7,26 @@ body{
     position: fixed;
     box-shadow: 0px 0px 10px #220022;
     border: #220022 1px solid;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    height: 300px;
-    width: 300px;
+    border-radius: 10px;
+    height: 400px;
+    width: 600px;
     top:100px;
     left:100px;
     resize: both;
     overflow: auto;
     cursor: default;
+}
+
+@media screen and (max-width: 800px) {
+    .window{
+        width: 300px;
+    }
+}
+
+@media screen and (max-height: 600px) {
+    .window{
+        height: 300px;
+    }
 }
 
 .window-titlebar{
@@ -99,16 +110,10 @@ body{
     height: 16px;
     filter: brightness(2);
     transition-duration: 0.2s;
+    background: #4444;
 }
 
 .window-titlebar-control-icon:hover{
-    background: #4444;
+    background: #8884;
     transition-duration: 0.2s;
-}
-
-.window-titlebar-control-close-icon{
-    height: 16px;
-    background: #C12A00;
-    border-radius: 50%;
-    filter: brightness(2);
 }

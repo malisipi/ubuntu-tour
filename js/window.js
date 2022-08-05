@@ -82,8 +82,7 @@ function window_maximize(w){
     document.getElementById(w+"-maximize").onclick = function(e) {window_restore(w)};
     document.getElementById(w).style.boxShadow="none";
     document.getElementById(w).style.border="none";
-    document.getElementById(w).style.borderTopLeftRadius="0px";
-    document.getElementById(w).style.borderTopRightRadius="0px";
+    document.getElementById(w).style.borderRadius="0px";
     document.getElementById(w).style.resize="none";
 }
 
@@ -97,8 +96,7 @@ function window_restore(w){
     document.getElementById(w+"-maximize").onclick = function(e) {window_maximize(w)};
     document.getElementById(w).style.boxShadow="0px 0px 10px #220022";
     document.getElementById(w).style.border="#220022 1px solid";
-    document.getElementById(w).style.borderTopLeftRadius="10px";
-    document.getElementById(w).style.borderTopRightRadius="10px";
+    document.getElementById(w).style.borderRadius="10px";
     document.getElementById(w).style.resize="both";
 }
 
@@ -111,7 +109,7 @@ function window_create(name,url,title,icon,icon_grayscale="",icon_brightness=1){
             <div class=\"window-titlebar-control\">\
                 <img class=\"window-titlebar-control-icon\" onclick=\"window_minimize('"+name+"');\" draggable=\"false\" src=\"icons/Suru/Suru/scalable/ui/window-minimize-symbolic.svg\"/>&nbsp;&nbsp;\
                 <img id=\""+name+"-maximize\" class=\"window-titlebar-control-icon\" onclick=\"window_maximize('"+name+"');\" draggable=\"false\" src=\"icons/Suru/Suru/scalable/ui/window-maximize-symbolic.svg\"/>&nbsp;&nbsp;\
-                <img class=\"window-titlebar-control-close-icon\" onclick=\"window_delete('"+name+"');\" draggable=\"false\" src=\"icons/Suru/Suru/scalable/ui/window-close-symbolic.svg\"/>&nbsp;&nbsp;\
+                <img class=\"window-titlebar-control-icon\" onclick=\"window_delete('"+name+"');\" draggable=\"false\" src=\"icons/Suru/Suru/scalable/ui/window-close-symbolic.svg\"/>&nbsp;&nbsp;\
             </div>\
         </div>\
         <iframe id=\""+name+"-content\" allowfullscreen class=\"window-content\" src=\""+url+"\"></iframe>\
@@ -134,7 +132,7 @@ function window_create_special(name,url,title,icon,icon_grayscale="",icon_bright
             <div class=\"window-titlebar-control\">\
                 <img class=\"window-titlebar-control-icon\" onclick=\"window_minimize('"+name+"');\" draggable=\"false\" src=\"icons/Suru/Suru/scalable/ui/window-minimize-symbolic.svg\"/>&nbsp;&nbsp;\
                 <img id=\""+name+"-maximize\" class=\"window-titlebar-control-icon\" onclick=\"window_maximize('"+name+"');\" draggable=\"false\" src=\"icons/Suru/Suru/scalable/ui/window-maximize-symbolic.svg\"/>&nbsp;&nbsp;\
-                <img class=\"window-titlebar-control-close-icon\" onclick=\"window_delete('"+name+"');\" draggable=\"false\" src=\"icons/Suru/Suru/scalable/ui/window-close-symbolic.svg\"/>&nbsp;&nbsp;\
+                <img class=\"window-titlebar-control-icon\" onclick=\"window_delete('"+name+"');\" draggable=\"false\" src=\"icons/Suru/Suru/scalable/ui/window-close-symbolic.svg\"/>&nbsp;&nbsp;\
             </div>\
         </div>\
         <div id=\""+name+"-titlebar2\" class=\"window-titlebar-special-2\"></div>\

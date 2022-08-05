@@ -11,6 +11,12 @@
     z-index: 999999999999999999999999999999999999999999;
 }
 
+@media screen and (max-width: 600px) {
+    #notify-box{
+        width: 300px;
+    }
+}
+
 #notify-title{
     position: absolute;
     top: 12px;

@@ -113,10 +113,14 @@ app_list = [
         "icon_48":"icons/Suru/Suru/48x48/apps/wine.png"
     },
     {
-        "code_name":"code",
-        "name":"Visual Studio Code",
-        "location":"https://vscode.dev",
-        "icon":"https://code.visualstudio.com/favicon.ico"
+        "code_name":"gnome-clocks",
+        "name":"Clocks",
+        "location":"apps/clock/index.html",
+        "icon_48":"icons/Suru/Suru/48x48/apps/clock-app.png",
+        "dark_icon":"icons/Suru/Suru/scalable/apps/clock-app-symbolic.svg",
+        "dark_icon_brightness":2,
+        "special":true,
+        "icon":"icons/Suru/Suru/256x256/apps/clock-app.png"
     }
 ]
 

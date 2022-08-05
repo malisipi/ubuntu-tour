@@ -9,10 +9,9 @@
                 -webkit-user-select: none;           
             }
 
-            .weather-daily > div > img {
+            .weather-daily > div > div > img {
                 height: 32px;
                 width: 32px;
-                position: relative;
                 top: 25px;
             }
 
@@ -34,6 +33,18 @@
             .weather-daily > div{
                 height: 100%;
                 border-right: #222222 1px solid;
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                place-content: space-between;
+            }
+
+            .weather-daily > div > div {
+                padding: 10px;
+            }
+
+            .weather-daily > div > div > * {
+                padding: 3px;
             }
 
             .weather-time{
@@ -46,17 +57,13 @@
             }
 
             .weather-temp-min{
-                position: relative;
                 color: #22f;
                 font-size: 16px;
-                top: 105px;
             }
 
             .weather-temp-max{
-                position: relative;
                 color: #f22;
                 font-size: 16px;
-                top: 110px;
             }
 
             .current-weather > img{
@@ -157,9 +164,9 @@
             weather_time.forEach((time,i)=>{
                 document.querySelector(".weather-daily").innerHTML+=(
                 "<div><div class='weather-time'>"+["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"][time.match(/-[0-9][0-9]-/g)[0].replace(/\-/g,"")-1]+" "+time.match(/[0-9][0-9]$/g)[0]+"</div>"+
-                "<div class='weather-temp-min'>"+Math.round(weather_min[i])+"</div>"+
+                "<div><div class='weather-temp-min'>"+Math.round(weather_min[i])+"</div>"+
                 "<div class='weather-temp-max'>"+Math.round(weather_max[i])+"</div>"+
-                "<img draggable='false' src=\""+_weather_codes[weather_code[i]]+"\"/></div>"
+                "<img draggable='false' src=\""+_weather_codes[weather_code[i]]+"\"/></div></div>"
                 );})
             }
             document.querySelector("#current-logo").src=_weather_codes[data["current_weather"]["weathercode"]];

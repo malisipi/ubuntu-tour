@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/app-layout.css">
+        <link rel="stylesheet" href="../css/app-styles.css">
+        <link rel="stylesheet" href="../../css/Font.css">
+        <style>
+            body{
+                background: #222222;
+                user-select: none;
+                -webkit-user-select: none;           
+            }
+
+            .stopwatch{
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+
+            .stopwatch-timer{
+                font-size: 60px;
+            }
+
+            .stopwatch-buttons{
+                grid-template-columns: 75px auto 75px;
+                display: grid;
+            }
+
+            .split-seconds{
+                font-size: 45px;
+            }
+
+            .grey{
+                color: #9c9c9c;
+            }
+
+            .white{
+                color: #ffffff;
+            }
+
+            .start[value=Start]{
+                background: #3584e4;
+                color: #ffffff;
+            }
+
+            .start[value=Resume]{
+                background: #3584e4;
+                color: #ffffff;
+            }
+
+            .start[value=Pause]{
+                background: #3a3a3a;
+                color: #ffffff;
+            }
+
+            input{
+                border-radius: 40px;
+                border: none;
+                font-size: 15px;
+                padding: 5px;
+                width: 75px;
+            }
+
+            input.standard{
+                background: #393939;
+                color: #ffffff;
+            }
+
+            input:disabled {
+                background: #2f2f2f !important;
+                color: #878787 !important;
+            }
+
+            .lap[value=Lap]{
+                background: #393939;
+                color: #ffffff;
+            }
+
+            .lap[value=Clear]{
+                background: #c01c28;
+                color: #ffffff;
+            }
+
+            .laps {
+                padding: 25px;
+                box-sizing: border-box;
+                overflow-y: auto;
+                position: fixed;
+                top: 160px;
+                width: 80%;
+                left: 10%;
+                color: #fff;
+                font-size: 20px;
+                height: calc(100% - 180px);
+                display: none;
+            }
+
+            .laps > div {
+                padding: 5px 10%;
+                box-sizing: border-box;
+                display: flex;
+                justify-content: space-between;
+            }
+        </style>
+        <style id="whiteBlue">.whiteBlue{color: #ffffff;}</style>
+    </head>
+    <body>
+        <div class="stopwatch">
+            <span class="stopwatch-timer">
+                <span class="hours grey">00</span><span class="white">:</span><span class="minutes grey">00</span><span class="white">:</span><span class="whiteBlue"><span class="seconds">00</span></span><span class="white">.</span><span class="whiteBlue"><span class="split-seconds">0</span></span>
+            </span>
+            <br><br>
+            <div class="stopwatch-buttons">
+                <input type="button" onclick="startButton();" class="start" value="Start"/>
+                <div></div>
+                <input type="button" onclick="lapButton();" class="lap" disabled value="Lap">
+            </div>
+        </div>
+        <div class="laps"></div>
+        <script>
+            document_time=[
+                document.querySelector(".hours"),
+                document.querySelector(".minutes"),
+                document.querySelector(".seconds"),
+                document.querySelector(".split-seconds"),
+            ]
+
+            time=[0,0,0,0];
+            the_timer=null;
+            which_lap=0;
+
+            function stopTimer(){
+                pauseTimer();
+                document.querySelector("#whiteBlue").remove();
+                document.body.insertAdjacentHTML("beforeend","<style id=\"whiteBlue\">.whiteBlue{color: #ffffff;}</style>");
+                time=[0,0,0,0];
+                document_time.forEach((e,i) => {
+                    if(i!=3){
+                        e.innerText="00";
+                    } else {
+                        e.innerText="0";
+                    }
+                });
+                the_timer=null;
+            }
+
+            function resumeTimer(){
+                document.querySelector("#whiteBlue").remove();
+                document.body.insertAdjacentHTML("beforeend","<style id=\"whiteBlue\">.whiteBlue{color: #75aae7;}</style>");
+                the_timer=setInterval(()=>{
+                    if(time[3]<9){
+                        time[3]+=1;
+                        document_time[3].innerText=time[3];
+                    } else {
+                        time[3]=0;
+                        document_time[3].innerText=time[3];
+                    }
+
+                    if(time[3]==0){
+                        if(time[2]<59){
+                            time[2]+=1;
+                            document_time[2].innerText = time[2].toString().length==2 ? time[2] : "0"+time[2];
+                        } else {
+                            time[2]=0;
+                            document_time[2].innerText = "00";
+                        }
+                    }
+
+                    if(time[2]==0 && time[3]==0){
+                        if(time[1]<59){
+                            time[1]+=1;
+                            document_time[1].innerText = time[1].toString().length==2 ? time[1] : "0"+time[1];
+                        } else {
+                            time[1]=0;
+                            document_time[1].innerText = "00";
+                        }
+                    }
+
+                    if(time[1]==0 && time[2]==0 && time[3]==0){
+                        time[0]+=1;
+                        document_time[0].innerText = time[0].toString().length==2 ? time[0] : "0"+time[0];
+                    }
+                },100)
+            }
+
+            function pauseTimer (){
+                document.querySelector("#whiteBlue").remove();
+                document.body.insertAdjacentHTML("beforeend","<style id=\"whiteBlue\">.whiteBlue{color: #ffffff;}</style>");
+                clearInterval(the_timer);
+                the_timer=null;
+            }
+
+            function startButton (){
+                if(document.querySelector(".start").value!="Pause"){
+                    resumeTimer();
+                    document.querySelector(".start").value="Pause";
+                    document.querySelector(".lap").disabled=false;
+                    document.querySelector(".lap").value="Lap";
+                } else {
+                    pauseTimer();
+                    document.querySelector(".start").value="Resume";
+                    document.querySelector(".lap").value="Clear";
+                }
+            }
+
+            function lapButton (){
+                if(document.querySelector(".lap").value!="Clear"){
+                    document.querySelector(".stopwatch").style.transform="translate(-50%,0px)";
+                    document.querySelector(".stopwatch").style.top="20px";
+                    document.querySelector(".laps").style.display="unset";
+                    var lap_time="";
+                    for(let i=0; i<4; i+=1){
+                        lap_time+=time[i].toString().length==2 ? time[i] : "0"+time[i]
+                        if(i<2) lap_time+=":"
+                        if(i==2) lap_time+="."
+                    }
+                    document.querySelector(".laps").insertAdjacentHTML("afterbegin","<div><div>"+lap_time+"</div><div style=\"color:#fff7\">Lap&nbsp;"+(++which_lap )+"</div>")
+                } else {
+                    document.querySelector(".start").value="Start";
+                    document.querySelector(".lap").value="Lap";
+                    document.querySelector(".lap").disabled=true;
+                    stopTimer();
+                }
+            }
+        </script>
+    </body>
+</html>
+

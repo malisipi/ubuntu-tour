@@ -1,6 +1,6 @@
 # Ubuntu Tour
 
-Web based Ubuntu 21.10 desktop remake. You can try latest ubuntu edition remake from [here](https://malisipi.github.io/ubuntu-tour/)
+Web based Ubuntu 22.04 desktop remake. You can try latest ubuntu edition remake from [here](https://malisipi.github.io/ubuntu-tour/)
 
 ## Features
 
@@ -22,7 +22,7 @@ For introduce the Ubuntu environment' beauty (on web) and for fun. :) I was insp
 * Increase clone apps' functionality
 * [13] Create more clone application
 * [+] Update interface to similar Ubuntu 21.10 interface
-* [-] Update interface to similar Ubuntu 22.04 interface
+* [+] Update interface to similar Ubuntu 22.04 interface
 
 ## App Demo Mode
 
