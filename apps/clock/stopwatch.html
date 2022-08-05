@@ -220,6 +220,11 @@
                     document.querySelector(".start").value="Start";
                     document.querySelector(".lap").value="Lap";
                     document.querySelector(".lap").disabled=true;
+                    document.querySelector(".stopwatch").style.transform="";
+                    document.querySelector(".stopwatch").style.top="";
+                    document.querySelector(".laps").style.display="";
+                    which_lap=0;
+                    document.querySelector(".laps").innerHTML="";
                     stopTimer();
                 }
             }
