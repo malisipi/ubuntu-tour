@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>Ubuntu</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="icons/Suru/Suru/scalable/places/start-here-symbolic.svg" type="image/x-icon">
+        <meta name="description" content="ubuntu, online, tour, demo, live, github">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/login.css" id="login-css">
         <script src="main.js"></script>
@@ -11,22 +12,22 @@
         <script src="js/panel.js" defer></script>
         <link rel="stylesheet" href="css/Font.css">
         <script src="js/window.js"></script>
-        <link rel="stylesheet" href="css/window.css">
-        <link rel="stylesheet" href="css/dock.css">
-        <script src="js/app-menu.js"></script>
-        <link rel="stylesheet" href="css/app-menu.css">
+        <link rel="preload" href="css/window.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="preload" href="css/dock.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <script src="js/app-menu.js" defer></script>
+        <link rel="preload" href="css/app-menu.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <link rel="stylesheet" href="css/desktop.css">
-        <link rel="stylesheet" href="css/brightness.css">
-        <script src="js/activities.js"></script>
-        <link rel="stylesheet" href="css/activities.css">
+        <link rel="preload" href="css/brightness.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <script src="js/activities.js" defer></script>
+        <link rel="preload" href="css/activities.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <script src="js/localStorage.js" defer></script>
-        <script src="js/workspace.js"></script>
-        <link rel="stylesheet" href="css/workspace.css">
+        <script src="js/workspace.js" defer></script>
+        <link rel="preload" href="css/workspace.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <script src="js/dialogs.js"></script>
-        <link rel="stylesheet" href="css/dialog.css">
+        <link rel="preload" href="css/dialog.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <script src="js/notify.js"></script>
-        <link rel="stylesheet" href="css/notify.css">
-        <script src="js/app-manager.js"></script>
+        <link rel="preload" href="css/notify.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <script src="js/app-manager.js" defer></script>
         <script src="js/login.js"></script>
         <!-- PWA support -->
         <link rel="manifest" href="manifest.webmanifest">
@@ -49,26 +50,26 @@
             </div>
             <div class="panel-notification" onclick="showNotificationAbout();"></div>
             <div class="panel-status" onclick="showStatusAbout();">
-                <img class="panel-status-icon" draggable="false" id="wifi" src="icons/Suru/Suru/scalable/status/network-wireless-connected-symbolic.svg"/>
-                <img class="panel-status-icon" draggable="false" id="sound" src="icons/Suru/Suru/scalable/status/audio-volume-high-symbolic.svg"/>
-                <img class="panel-status-icon" draggable="false" id="battery" src="icons/Suru/Suru/scalable/status/battery-level-100-charging-symbolic.svg"/>
+                <img class="panel-status-icon" draggable="false" alt="Wi-Fi" id="wifi" src="icons/Suru/Suru/scalable/status/network-wireless-connected-symbolic.svg"/>
+                <img class="panel-status-icon" draggable="false" alt="Sound" id="sound" src="icons/Suru/Suru/scalable/status/audio-volume-high-symbolic.svg"/>
+                <img class="panel-status-icon" draggable="false" alt="Battery" id="battery" src="icons/Suru/Suru/scalable/status/battery-level-100-charging-symbolic.svg"/>
             </div>
             <iframe class="status-about" src="status.html" hidden></iframe>
             <iframe class="notification-about" src="notification.html" hidden></iframe>
         </div>
         <div class="desktop" onclick="changePanelActiveAppIcon('icons/null.svg','');">
             <div class="desktop-item" ondblclick="start_app('nautilus');">
-                <img draggable="false" class="item-icon" src="icons/Suru/Suru/48x48/places/user-home.png"/><br>
+                <img draggable="false" loading="lazy" alt="Home" class="item-icon" src="icons/Suru/Suru/48x48/places/user-home.png"/><br>
                 Home
             </div>
         </div>
         <div class="dock-app-menu" onmousewheel="changeWorkspace();">
-            <img onclick="showHideAppMenu();" draggable="false" src="icons/Suru/Suru/scalable/categories/preferences-desktop-apps-symbolic.svg" class="dock-app-menu-icon"/>
+            <img onclick="showHideAppMenu();" loading="lazy" alt="App Menu" draggable="false" src="icons/Suru/Suru/scalable/categories/preferences-desktop-apps-symbolic.svg" class="dock-app-menu-icon"/>
         </div>
         <div class="dock">
             <div id="dock"></div>
             <div class="dock-app-container">
-                <img class="dock-app" onclick="start_app('nautilus','open=Trash');" draggable="false" src="icons/Suru/Suru/48x48/places/user-trash.png">
+                <img class="dock-app" loading="lazy" alt="Trash" onclick="start_app('nautilus','open=Trash');" draggable="false" src="icons/Suru/Suru/48x48/places/user-trash.png">
             </div>
         </div>
         <div class="workspaces" hidden><div class="workspace-now"></div></div>
@@ -98,7 +99,7 @@
             <img id="notify-close" src="icons/Suru/Suru/scalable/ui/window-close-symbolic.svg"/>
         </div>
         <div class="login-user" style="display: none;" onclick="loginSession();">
-            <img src="icons/Suru/Suru/scalable/status/avatar-default-symbolic.svg"/>
+            <img alt="User Avatar" src="icons/Suru/Suru/scalable/status/avatar-default-symbolic.svg"/>
             <div>User</div>
         </div>
         <div class="login-ubuntu" style="display: none;">ubuntu</div>
