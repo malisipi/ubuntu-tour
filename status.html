@@ -17,6 +17,6 @@
         <img style="grid-area: settings;" onclick="openSettings();" draggable="false" src="icons/Suru/Suru/scalable/apps/settings-app-symbolic.svg" class="icon"/> <div style="grid-area: settings-text;" onclick="openSettings();" class="label">Settings</div>
         <img style="grid-area: lock;" onclick="lockSession();" draggable="false" src="icons/Suru/Suru/scalable/actions/system-lock-screen-symbolic.svg" class="icon"/> <div onclick="lockSession();" style="grid-area: lock-text;" class="label">Lock</div>
         <img style="grid-area: shutdown;" onclick="openShutdown();" draggable="false" src="icons/Suru/Suru/scalable/actions/system-shutdown-symbolic.svg" class="icon"/> <div style="grid-area: shutdown-text;" onclick="openShutdown();" class="label">Shutdown</div>
-        <script>if(navigator.getBattery!=undefined){parent.updateBatteryIcon();}</script>
+        <script>if(navigator.getBattery!=undefined){(parent.updateBatteryIcon || parent.btoa)();}</script>
     </body>
 </html>

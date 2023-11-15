@@ -1,15 +1,17 @@
 @font-face {
   font-family: UbuntuRegular;
   src: url(./UbuntuRegular.ttf);
+  font-display: swap;
 }
 
 @font-face {
   font-family: UbuntuMonoRegular;
   src: url(./UbuntuMonoRegular.ttf);
+  font-display: swap;
 }
 
 html,input,textarea,button {
-  font-family: UbuntuRegular;
+  font-family: UbuntuRegular, "Ubuntu", sans-serif;
 }
 
 input {
